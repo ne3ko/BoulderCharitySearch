@@ -9,10 +9,13 @@
 	position: relative;
 	text-align: center;
 	color: white;
-	border-radius: 25px;
-	border: outset #BFA959;
 	overflow: hidden;
-	background-color: #BFA959;
+	-webkit-touch-callout: none; /* iOS Safari */
+  	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+  	-khtml-user-select: none;    /* Konqueror */
+  	-moz-user-select: none;      /* Firefox */
+  	-ms-user-select: none;       /* Internet Explorer/Edge */
+  	user-select: none;
 }
 .imgtext{
 	position: absolute;
@@ -24,9 +27,31 @@
 	font-family: 'PT Sans', sans-sherif;
 	font-weight: bold;
 	font-size: 175%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;  
 }
 
 .bodytext{
 	font-color: #2B1E14;
 	font-family: 'PT Sans', sans-sherif;
+}
+
+.teamportrait{
+	width: 30%;
+	border-radius: 50%;
+	overflow: hidden;
+	max-height: 312px;
+	max-width: 208px;
+	position: relative;
+	left: 10%;
+	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;   
+  	user-select: none; 
 }
