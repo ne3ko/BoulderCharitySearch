@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<style>
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+<div class="row">
+  <div class="column">
+    <a href="http://www.google.com" target＝_blank ><img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/11/qtq80-W7SVCk.jpeg" alt="after snow view" style="width: 400px; height: 200px;border-radius: 25px;">
+      <p style="margin-left:70px"><font size="2" color="black">Get Together</font></p></a>
+  </div>
+  <div class="column">
+    <a href="http://www.google.com" target＝_blank ><img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/10/qtq80-O9C7e7.jpeg" alt="after snow view" style="width: 300px; height: 200px; margin-left:25px;border-radius: 25px;">
+  <p style="margin-left:90px"><font size="2" color="black">Get Together</font></p></a>
+  </div>
+  <div class="column">
+    <a href="http://www.google.com" target＝_blank ><img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/11/qtq80-j0lrU1.jpeg" alt="after snow view" style="width: 300px; height: 200px; margin-left:50px;border-radius: 25px;">
+      <p style="margin-left:170px"><font size="2" color="black">Travel</font></p></a>
+  </div>
+</div>
