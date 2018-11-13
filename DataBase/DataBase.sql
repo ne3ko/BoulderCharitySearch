@@ -1,4 +1,2 @@
-create table if not exists Charity(id serial, charityName varchar(40) not null, logo varchar(70) not null, summary varchar (2000) not null, financeSummary varchar (2000) not null, primary key (id))
-create table if not exists financeSummary(id serial, programExpenses varchar(5), revenue varchar(5), )
-create table if not exists catagories(id serial, )
-insert into store(charityName, logo, summary financeSummary) values()
+create table if not exists Charity(charityID serial, charityName varchar(40) not null, charityLink varchar(200) not null, catagoryName varchar(20) not null, charityDescription varchar(2000) not null, charityTag varchar(800) not null, logoURL varchar(200) not null, irsLink varchar(200), primary key (charityID))
+insert into Charity(charityName, catagoryName, charityDescription, charityTag, logoURL) values(--fill in here )
