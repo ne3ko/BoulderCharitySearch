@@ -1,2 +1,3 @@
-create table if not exists Charity(charityID serial, charityName varchar(40) not null, charityLink varchar(200) not null, catagoryName varchar(20) not null, charityDescription varchar(2000) not null, charityTag varchar(800) not null, logoURL varchar(200) not null, irsLink varchar(200), primary key (charityID))
+create table if not exists Charity(charityID serial, charityName varchar(40) not null, charityLink varchar(200) not null, catagoryName varchar(20) not null, charityDescription varchar(2000) not null, charityTag varchar(800) not null, logoURL varchar(200) not null, primary key (charityID))
+create table if not exists finance(charityID serial, assets varchar (20), income varchar (20), irslink varchar (200), primary key (charityID))
 insert into Charity(charityName, catagoryName, charityDescription, charityTag, logoURL) values(--fill in here )
