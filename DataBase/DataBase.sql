@@ -32,7 +32,7 @@ insert into charity(
 	city,
 	state,
 	zipcode,
-	phone_number,
+	phone_number
 	email,
 	catagory_name, 
 	charity_description, 
