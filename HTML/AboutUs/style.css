@@ -16,6 +16,19 @@ body{
 	padding: 0;
 }
 
+/*Horizontal Line*/
+hr{
+	border-color: #BFA959;
+	background-color: #BFA959;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+}
+
 /*Header & Navigation Bar*/
 .page-header{
 	margin-top: 0px;
@@ -62,14 +75,19 @@ body{
 }
 
 
-/*Body Content*/
-.aboutimages{
-	width: 80%;
-	height: 50%;
+/*Head*/
+.abouthead{
+	/*Size & Positioning*/
 	position: relative;
+	margin: 0 auto;
+	width: 100%;
+
+	/*Background Image Formatting*/
 	text-align: center;
 	color: white;
 	overflow: hidden;
+
+	/*Makes unselectable in various browsers*/
 	-webkit-touch-callout: none; /* iOS Safari */
   	-webkit-user-select: none;   /* Chrome/Safari/Opera */
   	-khtml-user-select: none;    /* Konqueror */
@@ -77,16 +95,17 @@ body{
   	-ms-user-select: none;       /* Internet Explorer/Edge */
   	user-select: none;
 }
-.imgtext{
+.abouthead_text{
+	/*Text Formatting*/
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	color: #BFA959;
 	text-shadow: 1px 1px #2B1E14;
-	font-family: 'PT Sans', sans-sherif;
+	font-family: 'Lato', sans-sherif;
 	font-weight: bold;
-	font-size: 175%;
+	font-size: 400%;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -94,6 +113,100 @@ body{
 	-ms-user-select: none;
 	user-select: none;  
 }
+
+/* Links to About Us Sections*/
+.aboutlink_wrapper{
+
+	/*Size & Positioning*/
+	display: inline-block;
+	width: 100%;
+
+	/*Background Image Formatting*/
+	text-align: center;
+	color: white;
+	overflow: hidden;
+}
+
+.aboutlink{
+	/*Size & Positioning*/
+	float: left;
+	width: 50%;
+	display: inline-block;
+
+	/*Background Text/Image Formatting*/
+	position: relative;
+	text-align: center;
+	color: white;
+	overflow: hidden;
+
+	/*Makes unselectable in various browsers*/
+	-webkit-touch-callout: none; /* iOS Safari */
+  	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+  	-khtml-user-select: none;    /* Konqueror */
+  	-moz-user-select: none;      /* Firefox */
+  	-ms-user-select: none;       /* Internet Explorer/Edge */
+  	user-select: none;
+}
+.aboutlink:before{
+	opacity: 1;
+}
+.aboutlink:hover{
+	opacity: 0.8;
+}
+
+.aboutlink_text{
+	/*Text Positioning*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
+	/*Text Formatting*/
+	color: #BFA959;
+	text-shadow: 1px 1px #2B1E14;
+	font-family: 'Lato', sans-sherif;
+	font-weight: bold;
+	font-size: 175%;
+
+	/*Makes unselectable in various browsers*/
+	-webkit-touch-callout: none; /* iOS Safari */
+  	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+  	-khtml-user-select: none;    /* Konqueror */
+  	-moz-user-select: none;      /* Firefox */
+  	-ms-user-select: none;       /* Internet Explorer/Edge */
+  	user-select: none;
+}
+
+/*Section Formatting*/
+.section_wrapper{
+
+	/*Div Postioning*/
+	position: relative;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.section_header{
+	/*Text Formatting*/
+	color: #2B1E14;
+	font-family: 'Lato', sans-sherif;
+	font-weight: bold;
+	font-size: 300%;
+}
+
+.section_body{
+	/*Div Postioning*/
+	position: relative;
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 2%;
+	margin-bottom: 7%;
+
+	color: #2B1E14;
+	font-family: 'Brawler', sherif;
+	font-size: 105%;
+}
+
 
 .bodytext{
 	font-color: #2B1E14;
