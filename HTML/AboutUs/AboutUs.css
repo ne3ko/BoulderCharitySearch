@@ -29,52 +29,6 @@ hr{
     border-width: 1px;
 }
 
-/*Header & Navigation Bar*/
-.page-header{
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-.navbar{
-	margin-bottom: 0 !important;
-	margin-top: 0;
-	border-radius: 0;
-	border: 0 !important;
-	position: top;
-}
-
-.navbar-default{
-	background-color: #BFA959;
-}
-
-.navbar-default .navbar-nav > li > a:link, .nav > li > a:visited{
-	color: #2B1E14;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active{
-	color: #2B1E14;
-	background-color: #c6b26c;
-	border-radius: 5%;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-
-}
-
-.header{
-	top: 0px;
-	margin: 0px;
-	height: 250px;
-
-
-	background-image: url("http://ucomm-exten2.colorado.edu:8085/cu_boulder_stock_photo_database/api/v1/asset/193368/preview");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: bottom right;
-}
-
-
 /*Head*/
 .abouthead{
 	/*Size & Positioning*/
@@ -208,23 +162,67 @@ hr{
 }
 
 
-.bodytext{
-	font-color: #2B1E14;
-	font-family: 'PT Sans', sans-sherif;
+.teammate_row{
+	position: relative;
+	margin: 0 auto;
+	background-color: blue;
+	width: 100%;
+	height: auto;
+	margin-top: 2%;
 }
 
-.teamportrait{
-	width: 30%;
-	border-radius: 50%;
-	overflow: hidden;
-	max-height: 312px;
-	max-width: 208px;
+/*Team*/
+.teammate_section{
+	/*Testing*/
+/*	background-color: green;
+*/
+	/*Position Formatting*/
 	position: relative;
-	left: 10%;
-	-webkit-touch-callout: none;
-  	-webkit-user-select: none;
-  	-khtml-user-select: none;
-  	-moz-user-select: none;
-  	-ms-user-select: none;   
-  	user-select: none; 
+	margin: 0 auto;
+	width: 30%;
+	padding: 1%;
+	float: left;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.teammate_section img{
+	/*Set Dimensions*/
+	border-radius: 50%;
+	position: relative;
+	width: 50%;
+	height: auto;
+
+	/*Center Image*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	/*Makes unselectable in various browsers*/
+	-webkit-touch-callout: none; /* iOS Safari */
+  	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+  	-khtml-user-select: none;    /* Konqueror */
+  	-moz-user-select: none;      /* Firefox */
+  	-ms-user-select: none;       /* Internet Explorer/Edge */
+  	user-select: none;
+}
+.teammate_section img:before{
+	opacity: 1;
+}
+.teammate_section img:hover{
+	opacity: 0.8;
+}
+
+
+.teammate_name{
+	/*Div Postioning*/
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 2%;
+
+	color: #2B1E14;
+	font-weight: bold;
+	font-family: 'Brawler', sherif;
+	font-size: 125%;
 }
