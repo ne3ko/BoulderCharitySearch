@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Categories Page</title>
+	<style type="text/css">
+		* { margin: 0px; box-sizing: border-box; }
+		body { background-color: #faece1; }
+		img { max-width: 20%; height: auto;}
+		.row { 
+			height: 33%;
+			overflow: auto;
+			width: 100%;
+			float: left;
+			}
+		.column { 
+			border: solid #2b1e14 1px;
+			height: 100%;
+			width: 45%; 
+			float: left; 
+			height: auto;
+			margin-top: 2em;
+			margin-left: 3%; 
+			border-radius: 8px;
+			text-align: center;
+			vertical-align: text-bottom;
+			background-color: #7D7B27;
+			box-shadow: 10px 10px 8px #888888;
+			margin-bottom: 1em;
+			}
+		.column p { height: auto; color: #2b1e14; margin: 1em 10%; background-color: #faece1; border-radius: 5px; padding: 10px; font-size: 25px; font-family: arial; }
+		.column a { 
+			height: 70%;
+			position: relative; 
+			-webkit-text-fill-color: #faece1; 
+			-webkit-text-stroke-width: 0.8px;
+			-webkit-text-stroke-color: black;
+			font-size: 30px;
+			font-family: Arial;
+			}
+		.header a:hover { opacity: 0.7; }
+		.category {
+			padding-top: 200px;
+			height: 250px;
+			width: 80%;
+			border: solid 3px #2b1e14; 
+			border-radius: 8px;
+			margin: 2em 10%;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+			background-repeat: no-repeat; 
+			background-size: cover; 
+		}
+		#cat1 { packground-position: center bottom; background-image: url('https://images.freeimages.com/images/large-previews/f6b/usg-1-1526902.jpg'); }
+		#cat2 { background-image: url('https://images.freeimages.com/images/large-previews/406/tree-1174007.jpg'); }
+		#cat3 { background-image: url('https://images.freeimages.com/images/large-previews/fe3/university-s-library-4-1492716.jpg'); }
+ 		#cat4 { background-image: url('https://images.freeimages.com/images/large-previews/84a/helping-the-elderly-1437135.jpg'); }
+	 	#cat5 { background-position: center bottom; background-image: url('https://images.freeimages.com/images/large-previews/074/student-protests-in-berlin-1472407.jpg'); }
+		#cat6 { background-image: url('https://images.freeimages.com/images/large-previews/4fa/art-supplies-1-1550962.jpg') }
+		form { float: right; border-radius: 5px; width: 40%;}
+		input[type="text"] {width: 100%}
+		.category:hover { opacity: 0.8; }
+		#logo { padding-left: 3%; padding-top: 70px; height: 260px; float: left; background-repeat: no-repeat; background-size: 100%; background-position: 50% 20%; background-image: url('https://d1vs4ggwgd7mlq.cloudfront.net/wp-content/uploads/2017/09/Flatirons-Getty-Images-849x563.jpg?x44525'); }
+		#hh1 { opacity: 0.9; position: relative; top: -60px; }
+		#navbar { z-index: 1; transition: top 0.5s; top: -100px; position: fixed; }
+		#catBlock { height: auto; float: left; position: relative; width: 100%; margin-bottom: 3em; }
+		.header { background-color: #BFA959; color: #f5ece1; padding: 20px; float: left; width: 100%; border: solid #2ble14 2px; } 
+		.header a { text-align: center; float: left; padding-left: 8%; }
+		#footer { clear: left; background-color: #BFA959; margin-top: 100%; }
+		
+	</style>
+</head>
+<body>
+	<div id="logo">
+		<img src="BCSLogo.png")>
+	</div>
+	<div id="hh1" class="header">
+		<a>Categories</a>
+		<a>About US</a>
+		<a>Contact</a>
+		<form>
+			<input type="text" placeholder="search">
+		</form>
+	</div>
+	<div id="navbar" class="header">
+		<a>Categories</a>
+		<a>About US</a>
+		<a>Contact</a>
+		<form>
+			<input type="text" placeholder="search">
+		</form>
+	</div>
+	<div id="catBlock" class="containter">
+		<div class="row">
+			<div class="column">
+				<div id="cat1" class="category">
+					<a>Health</a>
+				</div>
+				<p>Provide support people with health issues and contribute to health </p>
+			</div>
+			<div class="column">
+				<div id="cat2" class="category">
+					<a>Environment</a>
+				</div>
+				<p>Help protect the environment and perserve ecosystems.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<div id="cat3" class="category">
+					<a>Education</a>
+				</div>
+				<p>Contribute to schools and servises that promote better education.</p>
+			</div>
+			<div class="column">
+				<div id="cat4" class="category">
+					<a>Human Services</a>
+				</div>
+				<p>Support local Boulder citizens in need.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<div id="cat5" class="category">
+					<a>Civic</a>
+				</div>
+				<p>Support the population's civil rights and civil liberties.</p>
+			</div>
+			<div class="column">
+				<div id="cat6" class="category">
+					<a>Art & Culture</a>
+				</div>
+				<p>Become a benefactor for local art and culture.</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<h1>
+			Our footer
+		</h1>
+	</div>
+	<script>
+		var oldScroll = window.pageYOffset;
+		window.onscroll = function func() {
+			var currentScroll = window.pageYOffset;
+			if (oldScroll > currentScroll) {
+				document.getElementById("navbar").style.top = "-100px";
+			} else if (window.pageYOffset > 200) {
+				document.getElementById("navbar").style.top = "0";
+			} else {
+				document.getElementById("navbar").style.top = "-100px";
+			}
+			oldScroll = currentScroll;
+		};
+	</script>
+</body>
+</html>
