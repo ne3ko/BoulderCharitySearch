@@ -141,19 +141,5 @@
 			Our footer
 		</h1>
 	</div>
-	<script>
-		var oldScroll = window.pageYOffset;
-		window.onscroll = function func() {
-			var currentScroll = window.pageYOffset;
-			if (oldScroll > currentScroll) {
-				document.getElementById("navbar").style.top = "-100px";
-			} else if (window.pageYOffset > 200) {
-				document.getElementById("navbar").style.top = "0";
-			} else {
-				document.getElementById("navbar").style.top = "-100px";
-			}
-			oldScroll = currentScroll;
-		};
-	</script>
 </body>
 </html>
