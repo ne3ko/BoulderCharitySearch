@@ -1,7 +1,17 @@
+<!-- Written By Hans Hofmann -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="../Header.css">
 	
 	<title>Categories Page</title>
 	<style type="text/css">
@@ -39,7 +49,6 @@
 			font-size: 30px;
 			font-family: Arial;
 			}
-		.header a:hover { opacity: 0.7; }
 		.category {
 			padding-top: 200px;
 			height: 250px;
@@ -60,36 +69,29 @@
 		form { float: right; border-radius: 5px; width: 40%;}
 		input[type="text"] {width: 100%}
 		.category:hover { opacity: 0.8; }
-		#logo { padding-left: 3%; padding-top: 70px; height: 260px; float: left; background-repeat: no-repeat; background-size: 100%; background-position: 50% 20%; background-image: url('https://d1vs4ggwgd7mlq.cloudfront.net/wp-content/uploads/2017/09/Flatirons-Getty-Images-849x563.jpg?x44525'); }
-		#hh1 { opacity: 0.9; position: relative; top: -60px; }
-		#navbar { z-index: 1; transition: top 0.5s; top: -100px; position: fixed; }
 		#catBlock { height: auto; float: left; position: relative; width: 100%; margin-bottom: 3em; }
-		.header { background-color: #BFA959; color: #f5ece1; padding: 20px; float: left; width: 100%; border: solid #2ble14 2px; } 
-		.header a { text-align: center; float: left; padding-left: 8%; }
 		#footer { clear: left; background-color: #BFA959; margin-top: 100%; }
 		
 	</style>
 </head>
 <body>
-	<div id="logo">
-		<img src="BCSLogo.png")>
-	</div>
-	<div id="hh1" class="header">
-		<a>Categories</a>
-		<a>About US</a>
-		<a>Contact</a>
-		<form>
-			<input type="text" placeholder="search">
-		</form>
-	</div>
-	<div id="navbar" class="header">
-		<a>Categories</a>
-		<a>About US</a>
-		<a>Contact</a>
-		<form>
-			<input type="text" placeholder="search">
-		</form>
-	</div>
+	  	<!-- Header -->
+    <div class="header">
+      <img src="https://raw.githubusercontent.com/ne3ko/BoulderCharitySearch/master/Logo/BCSLogo1%20(Backgroundless).png" alt="BCS Logo" style="margin: 1% 1%; width: 20%; height: auto">
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default"> 
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </div>
+    </nav>
+	
+	<!-- Category Tiles -->
 	<div id="catBlock" class="containter">
 		<div class="row">
 			<div class="column">
