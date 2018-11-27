@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+
+
+		<title>BCS homepage</title>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0; background-color: #F5ECE1}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+header {
+
+  background: #F5ECE1;
+
+  padding: 10px;
+  background-image: url("http://ucomm-exten2.colorado.edu:8085/cu_boulder_stock_photo_database/api/v1/asset/193368/preview");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom right;
+
+}
+
+
+
+header h1 {
+
+  margin: 10;
+
+
+}
+
+
+#navbar {
+  overflow: hidden;
+  background-color: #BFA959;
+	width: 300px;
+
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    border-color: #7D7B27;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-style: inset;
+    border-width: 1px;
+    color: yellow;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+footer {
+
+  padding: 100px;
+
+
+
+
+}
+</style>
+</head>
+<body>
+	<header>
+
+	  <h1><img src="1.jpg" alt="after snow view" style="width: 500px; height: 200px;">
+
+	</div>
+	    </h1>
+
+
+	</header>
+
+<hr>
+<div id="navbar">
+
+<a  href="javascript:void(0)"><font size="4" >Home</font></a>
+<a href="javascript:void(0)"><font size="4" >About us</font></a>
+
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+	<img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/11/CU-Campus-8x5.jpeg" style="width:100%;border-radius: 25px;">
+
+</div>
+
+<div class="mySlides fade">
+
+	<img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/11/perry-grone-732606-unsplash.jpg" style="width:100%;border-radius: 25px;">
+
+</div>
+
+<div class="mySlides fade">
+
+	<img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/11/val-vesa-624638-unsplash.jpg" style="width:100%;border-radius: 25px;">
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<h2 style="margin-left:30px; margin-top:50px " ><font size="6" >Today Things To Do</font></h2>
+
+
+<div class="row">
+<div class="column">
+	<a href="http://www.google.com" target＝_blank ><img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/11/qtq80-W7SVCk.jpeg" alt="after snow view" style="width: 300px; height: 200px;margin-left:120px;border-radius: 25px;">
+		<p style="margin-left:200px"><font size="4" color="black">Get Together</font></p></a>
+</div>
+<div class="column">
+	<a href="http://www.google.com" target＝_blank ><img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/10/qtq80-O9C7e7.jpeg" alt="after snow view" style="width: 300px; height: 200px; margin-left:25px;border-radius: 25px;">
+<p style="margin-left:90px"><font size="4" color="black">Get Together</font></p></a>
+</div>
+<div class="column">
+	<a href="http://www.google.com" target＝_blank ><img src="http://www.bouldercharitysearch.com/wp-content/uploads/2018/11/qtq80-j0lrU1.jpeg" alt="after snow view" style="width: 300px; height: 200px; margin-left:50px;border-radius: 25px;">
+		<p style="margin-left:170px"><font size="4" color="black">Travel</font></p></a>
+</div>
+</div>
+
+<footer >
+
+<hr>
+<br>
+
+      <a href="https://bouldercharitysearch.com/" target＝_blank style="margin-left:400px;margin-top:10px;"><font size="5" color=#D7AC87><b>Home</b></a>
+
+        <a href="http://www.google.com" target＝_blank style="margin-left:300px"  ><font size="5" color=#D7AC87><b>Charity List</li>
+
+        <a href="http://www.google.com" target＝_blank style="margin-left:300px"><font size="5" color=#D7AC87><b>Contact</li>
+<br>
+        <a href="https://bouldercharitysearch.com/categories" target＝_blank style="margin-left:400px;"><font size="5" color=#D7AC87><b>Categories</li>
+
+        <a href="https://bouldercharitysearch.com/about-us" target＝_blank style="margin-left:250px;"><font size="5" color=#D7AC87><b>About Us</li>
+
+      <a href="http://www.google.com" target＝_blank style="margin-left:320px;" ><font size="5" color=#D7AC87><b>Charity </li>
+
+
+
+</footer>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
