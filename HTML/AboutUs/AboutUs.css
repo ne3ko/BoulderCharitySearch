@@ -164,8 +164,7 @@ hr{
 
 .teammate_row{
 	position: relative;
-	margin: 0 auto;
-	background-color: blue;
+	float: left;
 	width: 100%;
 	height: auto;
 	margin-top: 2%;
@@ -190,7 +189,7 @@ hr{
 	/*Set Dimensions*/
 	border-radius: 50%;
 	position: relative;
-	width: 50%;
+	width: 60%;
 	height: auto;
 
 	/*Center Image*/

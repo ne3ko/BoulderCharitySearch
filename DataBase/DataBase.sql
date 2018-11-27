@@ -6,6 +6,7 @@ create table if not exists charity(
 	city varchar(20) not null,
 	state varchar(2) not null,
 	zipcode varchar(5) not null,
+	url varchar(40),
 	phone_number varchar(12),
 	email varchar(100),
 	catagory_name varchar(30) not null, 
