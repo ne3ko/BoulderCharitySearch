@@ -1,4 +1,3 @@
-
 <!-- Written By Hans Hofmann -->
 
 <!DOCTYPE html>
@@ -41,35 +40,41 @@
 			margin-bottom: 1em;
 			}
 		.column p { height: auto; color: #2b1e14; margin: 1em 10%; background-color: #faece1; border-radius: 5px; padding: 10px; font-size: 25px; font-family: arial; }
-		.column a { 
-			height: 70%;
-			position: relative; 
+		button { 
+			border-radius: 8px;
+			height: 250px;
+			float: left;
+			width: 100%;
+			border: none;
+			text-align: bottom;
+			margin: auto;
 			-webkit-text-fill-color: white; 
 			-webkit-text-stroke-width: 1.1px;
 			-webkit-text-stroke-color: black;
 			font-size: 30px;
 			font-family: Arial;
+			
 			}
+		form {
+			height: 100%;
+			width: 100%;
+		}
 		.category {
-			padding-top: 200px;
 			height: 250px;
 			width: 80%;
-			border: solid 3px #2b1e14; 
-			border-radius: 8px;
 			margin: 2em 10%;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
 			background-repeat: no-repeat; 
 			background-size: cover; 
 		}
-		#cat1 { packground-position: center bottom; background-image: url('https://images.freeimages.com/images/large-previews/f6b/usg-1-1526902.jpg'); }
-		#cat2 { background-image: url('https://images.freeimages.com/images/large-previews/406/tree-1174007.jpg'); }
-		#cat3 { background-image: url('https://images.freeimages.com/images/large-previews/fe3/university-s-library-4-1492716.jpg'); }
- 		#cat4 { background-image: url('https://images.freeimages.com/images/large-previews/84a/helping-the-elderly-1437135.jpg'); }
-	 	#cat5 { background-position: center bottom; background-image: url('https://images.freeimages.com/images/large-previews/074/student-protests-in-berlin-1472407.jpg'); }
-		#cat6 { background-image: url('https://images.freeimages.com/images/large-previews/4fa/art-supplies-1-1550962.jpg') }
-		#cat7 { background-image: url('https://images.freeimages.com/images/large-previews/94f/sports-at-the-beach-1563395.jpg'); }
-		#cat8 { background-image: url('https://images.freeimages.com/images/large-previews/c70/religious-place-1228462.jpg'); }
-		form { float: right; border-radius: 5px; width: 40%;}
+		#cat1 { background-size: cover; background-position: center bottom; background-image: url('https://images.freeimages.com/images/large-previews/f6b/usg-1-1526902.jpg'); }
+		#cat2 { background-size: cover; background-image: url('https://images.freeimages.com/images/large-previews/406/tree-1174007.jpg'); }
+		#cat3 { background-size: cover; background-image: url('https://images.freeimages.com/images/large-previews/fe3/university-s-library-4-1492716.jpg'); }
+ 		#cat4 { background-size: cover; background-image: url('https://images.freeimages.com/images/large-previews/84a/helping-the-elderly-1437135.jpg'); }
+	 	#cat5 { background-size: cover; background-position: center bottom; background-image: url('https://images.freeimages.com/images/large-previews/074/student-protests-in-berlin-1472407.jpg'); }
+		#cat6 { background-size: cover; background-image: url('https://images.freeimages.com/images/large-previews/4fa/art-supplies-1-1550962.jpg') }
+		#cat7 { background-size: cover; background-image: url('https://images.freeimages.com/images/large-previews/94f/sports-at-the-beach-1563395.jpg'); }
+		#cat8 { background-size: cover; background-position: center bottom; background-image: url('https://images.freeimages.com/images/large-previews/c70/religious-place-1228462.jpg'); }
 		input[type="text"] {width: 100%}
 		.category:hover { opacity: 0.8; }
 		#catBlock { height: auto; float: left; position: relative; width: 100%; margin-bottom: 3em; }
@@ -99,58 +104,74 @@
 	<div id="catBlock" class="containter">
 		<div class="row">
 			<div class="column">
-				<div id="cat1" class="category">
-					<a>Health</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat1" name="category" type="submit" value="environment">Health</button>
+					</form>
 				</div>
 				<p>Provide support people with health issues and contribute to health </p>
 			</div>
 			<div class="column">
-				<div id="cat2" class="category">
-					<a>Environment</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat2" name="category" type="submit" value="environment">Environment</button>
+					</form>
 				</div>
-				<p>Help protect the environment and perserve ecosystems.</p>
+				<p>Help take steps towards protecting the environment and perserve ecosystems.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<div id="cat3" class="category">
-					<a>Education</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat3" name="category" type="submit" value="education">Education</button>
+					</form>
 				</div>
 				<p>Contribute to schools and servises that promote better education.</p>
 			</div>
 			<div class="column">
-				<div id="cat4" class="category">
-					<a>Human Services</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat4" name="category" type="submit" value="human services">Human Services</button>
+					</form>
 				</div>
-				<p>Support local Boulder citizens in need.</p>
+				<p>Support local Boulder citizens who are less fortunate and need help.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<div id="cat5" class="category">
-					<a>Civic</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat5" name="category" type="submit" value="civic">Civic</button>
+					</form>
 				</div>
 				<p>Support the population's civil rights and civil liberties.</p>
 			</div>
 			<div class="column">
-				<div id="cat6" class="category">
-					<a>Art & Culture</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat6" name="category" type="submit" value="art & culture">Art & Culture</button>
+					</form>
 				</div>
 				<p>Become a benefactor for local art and culture.</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="column">
-				<div id="cat7" class="category">
-					<a>Sports</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat7" name="category" type="submit" value="sports">Sports</button>
+					</form>
 				</div>
-				<p>Support the local athletic events and organizations.</p>
+				<p>Support Boulder's local athletic events and organizations.</p>
 			</div>
 			<div class="column">
-				<div id="cat8" class="category">
-					<a>Religious</a>
+				<div class="category">
+					<form action="../Categories.php" method="get">
+						<button  id="cat8" name="category" type="submit" value="religious">Religious</button>
+					</form>
 				</div>
-				<p>Give to charities devoted to speirituality and community.</p>
+				<p>Give to charities devoted to spirituality and community.</p>
 			</div>
 		</div>
 	</div>
