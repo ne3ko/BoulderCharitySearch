@@ -37,8 +37,19 @@
 	height: 250px;
 
 
-	background-image: url("http://ucomm-exten2.colorado.edu:8085/cu_boulder_stock_photo_database/api/v1/asset/193368/preview");
+	background-image: url("../Pictures/flatirons_header.jpg");
 	background-repeat: no-repeat;
+	background-color: #BFA959;
 	background-size: 100%;
-	background-position: bottom right;
+	background-position: top left;
+}
+
+footer {
+	padding: 80px;
+	background: #BFA959;
+	color: white;
+	margin-top: 100px;
+	position: relative;
+	float: left;
+	width: 100%;
 }
