@@ -1,3 +1,15 @@
+/*Google Font Types*/
+@import url('https://fonts.googleapis.com/css?family=Brawler|Lato:700');
+/* 
+For Lato Use --  		font-family: 'Lato', sans-serif;
+For Bralwer Use -- 		font-family: 'Brawler', serif;
+*/	
+
+@font-face{
+	font-family: "Brawler";
+	src: ("https://fonts.google.com/specimen/Brawler");
+}
+
 /*Header & Navigation Bar*/
 .page-header{
 	margin-top: 0px;
@@ -66,4 +78,21 @@ footer {
 	position: relative;
 	float: left;
 	width: 100%;
+}
+
+.footer_text{
+	position: relative;
+
+	color: #2B1E14;
+	text-align: center;
+	font-family: 'Lato', sans-sherif;
+}
+.footer_text a:link, a:visited{
+	color: #2B1E14;
+	font-family: 'Lato', sans-sherif;
+}
+.footer_text a:hover, a:active{
+	color: #FAECE1;
+	font-family: 'Lato', sans-sherif;
+	text-decoration: none;
 }
