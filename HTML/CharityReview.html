@@ -104,15 +104,16 @@ else
       </div>
     </div>
 
-    <h1>
+    <h1 style = "margin-left:20%;">
       Charity Summary
     </h1>
+
     <div>
       <!-- pull from the summary in the table -->     
             <div><?php echo pg_query($db_connection, "SELECT charity_description from charity WHERE charityid = $id"); ?></div>
     </div>
 
-    <h1>
+    <h1 style = "margin-left:20%;">
       Financial Summary
     </h1>
 
