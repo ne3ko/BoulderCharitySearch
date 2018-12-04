@@ -56,7 +56,7 @@
 <h1>
 <?php
 
-//$db_connection = pg_connect("host=ec2-23-23-110-26.compute-1.amazonaws.com dbname=d3scuneimo0uco user=crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52 sslmode=require port=5432");
+$db_connection = pg_connect("host=ec2-23-23-110-26.compute-1.amazonaws.com dbname=d3scuneimo0uco user=crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52 sslmode=require port=5432");
 
 //$conn = pg_connect(getenv("postgres://crizzbzbapugiv:c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52@ec2-23-23-110-26.compute-1.amazonaws.com:5432/d3scuneimo0uco"));
 
@@ -78,7 +78,7 @@ else
 {
   echo "Connection success";
 }
-?>   
+?>  
 </h1>
 
     <div class = "container">
