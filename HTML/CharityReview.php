@@ -110,7 +110,7 @@ else
         </div>
 
         <div class = "col-sm-4">
-          <h1><?php echo pg_query($db_connection, "SELECT charity_name from charity WHERE charity_id = 1"); ?></h1>
+          <h1><?php echo pg_query($db, "SELECT charity_name from charity WHERE charity_id = 1"); ?></h1>
         </div>
       </div>
     </div>
