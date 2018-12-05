@@ -7,7 +7,7 @@ import string
 import re
 
 def read_data() :
-	return pd.DataFrame.from_csv('charitydata_raw.csv')
+	return pd.read_csv('charitydata_raw.csv', index_col = 0)
 
 def clean_data(data) :
 	# Turn NULL values into actual NULL values
@@ -18,23 +18,40 @@ def clean_data(data) :
 
 
 	# Create uniform formatting for the address column
-	data['address'] = data['address'].str.lower()
-	data['address'] = data['address'].str.title()
+	if 'address' in data :
+		data['address'] = data['address'].str.lower()
+		data['address'] = data['address'].str.title()
 
 	# Format Phone Numbers to ###-###-###
-	data['phone_number'] = data['phone_number'].str.replace('[^\w\s]','')
-	data['phone_number'] = data['phone_number'].str.replace(' ','')
-	data['phone_number'] = data['phone_number'].astype(str).apply(lambda x: x[:3] + '-' + x[3:6] + '-' + x[6:10])
-	data['phone_number'] = data['phone_number'].replace('nan--',np.nan)
+	if 'phone_number' in data :
+		data['phone_number'] = data['phone_number'].str.replace('[^\w\s]','')
+		data['phone_number'] = data['phone_number'].str.replace(' ','')
+		data['phone_number'] = data['phone_number'].astype(str).apply(lambda x: x[:3] + '-' + x[3:6] + '-' + x[6:10])
+		data['phone_number'] = data['phone_number'].replace('nan--',np.nan)
+
+	# Create uniform formatting for the category column
+	if 'category_name' in data :
+		data['category_name'] = data['category_name'].str.lower()
+		data['category_name'] = data['category_name'].str.title()
 
 	return data 
 
 def main() : 
 	data = read_data()
 
-	data = clean_data(data)
+	charity = data.iloc[:,:13]
+	financial = data.iloc[:,13:]
 
-	data.to_csv('charitydata_clean.csv')
+	# print(list(charity))
+	# print(list(financial))
+
+	charity = clean_data(charity)
+	financial = clean_data(financial)
+
+	charity.to_csv('../../charity.csv')
+	financial.to_csv('../../financial.csv')
+
+	return
 
 if __name__ == "__main__":
 	main()
