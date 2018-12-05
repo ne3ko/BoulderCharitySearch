@@ -56,19 +56,19 @@
 <h1>
 <?php
 
-$db_connection = pg_connect("host=ec2-23-23-110-26.compute-1.amazonaws.com dbname=d3scuneimo0uco user=crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52 sslmode=require port=5432");
+//$db_connection = pg_connect("host=ec2-23-23-110-26.compute-1.amazonaws.com dbname=d3scuneimo0uco user=crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52 sslmode=require port=5432");
 
 //$conn = pg_connect(getenv("postgres://crizzbzbapugiv:c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52@ec2-23-23-110-26.compute-1.amazonaws.com:5432/d3scuneimo0uco"));
-
+/*
 $dsn = "pgsql:"
-. "host=ec2-23-23-110-26.compute-1.amazonaws.com;"
+ "host=ec2-23-23-110-26.compute-1.amazonaws.com;"
 . "dbname=d3scuneimo0uco;"
 . "user=crizzbzbapugiv;"
 . "port=5432;"
 . "sslmode=requre;"
 . "password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52;"
 
-$db = new PDO($dsn)
+$db = new PDO($dsn);
 
 if(!$db)
 {
@@ -78,7 +78,22 @@ else
 {
   echo "Connection success";
 }
+*/
 ?>  
+
+<?php
+   $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
+   $port        = "port = 5432";
+   $dbname      = "dbname = d3scuneimo0uco";
+   $credentials = "user = crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52";
+
+   $db = pg_connect( "$host $port $dbname $credentials"  );
+   if(!$db) {
+      echo "Error : Unable to open database\n";
+   } else {
+      echo "Opened database successfully\n";
+   }
+?>
 </h1>
 
     <div class = "container">
@@ -95,7 +110,7 @@ else
         </div>
 
         <div class = "col-sm-4">
-          <h1><?php echo pg_query($db_connection, "SELECT charity_name from charity WHERE charity_id = 1"); ?></h1>
+          <h1><?php echo pg_query($db, "SELECT charity_name from charity WHERE charity_id = 1"); ?></h1>
         </div>
       </div>
     </div>
