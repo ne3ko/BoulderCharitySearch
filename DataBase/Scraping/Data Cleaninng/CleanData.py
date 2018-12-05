@@ -7,7 +7,7 @@ import string
 import re
 
 def read_data() :
-	return pd.read_csv('charitydata_raw.csv', index_col = 0)
+	return pd.read_csv('charitydata_raw.csv', index_col = 0, encoding = 'utf-8')
 
 def clean_data(data) :
 	# Turn NULL values into actual NULL values
@@ -34,6 +34,14 @@ def clean_data(data) :
 		data['category_name'] = data['category_name'].str.lower()
 		data['category_name'] = data['category_name'].str.title()
 
+	if 'charity_description' in data :
+		data['charity_description'] = data['charity_description'].str.replace('\n','<br>')
+
+	if 'charity_tag' in data :
+		data['charity_tag'] = data['charity_tag'].str.replace('\n',' ')
+
+
+
 	return data 
 
 def main() : 
@@ -48,8 +56,8 @@ def main() :
 	charity = clean_data(charity)
 	financial = clean_data(financial)
 
-	charity.to_csv('../../charity.csv')
-	financial.to_csv('../../financial.csv')
+	charity.to_csv('../../charity.csv', encoding = 'utf-8')
+	financial.to_csv('../../financial.csv', encoding = 'utf-8')
 
 	return
 
