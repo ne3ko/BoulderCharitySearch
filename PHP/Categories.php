@@ -1,4 +1,3 @@
-//variable is $_GET["category"]
 <!doctype html>
 <html>
    <body>
@@ -23,7 +22,21 @@
       </h1>
       
        <h1>
-       <?php  echo pg_get_result($db, "select charity_name from charity where charity_id = 1"); ?>
+       <?php
+
+
+$result = pg_query($db, "SELECT charity_name FROM charity");
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
+}
+
+while ($row = pg_fetch_row($result)) {
+  echo "Author: $row[0]  E-mail: $row[1]";
+  echo "<br />\n";
+}
+ 
+?>
       </h1>
       </body>
 </html>
