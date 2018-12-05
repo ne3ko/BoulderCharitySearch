@@ -32,7 +32,7 @@ if (!$result) {
 }
 
 while ($row = pg_fetch_row($result)) {
-  echo "Author: $row[0]  E-mail: $row[1]";
+  echo "charity name =  $row[0] ";
   echo "<br />\n";
 }
  
