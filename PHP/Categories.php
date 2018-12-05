@@ -3,6 +3,7 @@
 
 <html>
 <body>
+   <h1>
 <?php
    $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
    $port        = "port = 5432";
@@ -16,9 +17,13 @@
    } else {
       echo "Opened database successfully\n";
    }
-
+?>
+</h1>
+<h1>
+   <?php    
    $cat = $_GET["category"]
    echo $cat
-?>
+   ?>
+   </h1>
 </body>
 </html>
