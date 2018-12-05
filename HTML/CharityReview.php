@@ -54,32 +54,7 @@
     </nav>
     
 <h1>
-<?php
 
-//$db_connection = pg_connect("host=ec2-23-23-110-26.compute-1.amazonaws.com dbname=d3scuneimo0uco user=crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52 sslmode=require port=5432");
-
-//$conn = pg_connect(getenv("postgres://crizzbzbapugiv:c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52@ec2-23-23-110-26.compute-1.amazonaws.com:5432/d3scuneimo0uco"));
-/*
-$dsn = "pgsql:"
- "host=ec2-23-23-110-26.compute-1.amazonaws.com;"
-. "dbname=d3scuneimo0uco;"
-. "user=crizzbzbapugiv;"
-. "port=5432;"
-. "sslmode=requre;"
-. "password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52;"
-
-$db = new PDO($dsn);
-
-if(!$db)
-{
-  echo "Connection failed";
-}
-else
-{
-  echo "Connection success";
-}
-*/
-?>  
 
 <?php
    $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
@@ -88,6 +63,7 @@ else
    $credentials = "user = crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
+   $query = "SELECT logo from charity WHERE charityid = 1";
    if(!$db) {
       echo "Error : Unable to open database\n";
    } else {
@@ -103,10 +79,8 @@ else
 
         <div class = "col-sm-4" >
           <!-- Will have a php command to fetch image url -->
-
-          <!-- <img href = '<?php echo pg_query($db_connection, "SELECT url from charity WHERE charityid = $id") ?>' name = 'link'> -->
           <!-- this query is mostly a guess so far for how to match to a forms data for the id -->
-          <img src = '<?php echo pg_query($db_connection, "SELECT logo from charity WHERE charityid = 1") ?>' style='margin: 80px;max-height:450px; max-width:450px;'>
+          <img src = '<?php echo pg_query($db, $query) ?>' style='margin: 80px;max-height:450px; max-width:450px;'>
         </div>
 
         <div class = "col-sm-4">
@@ -121,12 +95,12 @@ else
         <!-- there is no test case -->
         <div class = "col-sm-4">
           
-            <a href = '<?php echo pg_query($db_connection, "SELECT url from charity WHERE charity_id = 1"); ?>'> Link to Charity Webpage </a>
+            <a href = '<?php echo pg_query($db, "SELECT url from charity WHERE charity_id = 1"); ?>'> Link to Charity Webpage </a>
         </div>
 
         <div class = "col-sm-4">
             <!-- there is no test case -->
-            <a href = '<?php echo pg_query($db_connection, "SELECT finance from charity WHERE charityid = 1"); ?>'> Link to Charity IRS Form </a>
+            <a href = '<?php echo pg_query($db, "SELECT finance from charity WHERE charityid = 1"); ?>'> Link to Charity IRS Form </a>
         </div>
 
       </div>
@@ -138,7 +112,7 @@ else
 
     <div>
       <!-- pull from the summary in the table -->     
-            <div><?php echo pg_query($db_connection, "SELECT charity_description from charity WHERE charityid = $id"); ?></div>
+            <div><?php echo pg_query($db, "SELECT charity_description from charity WHERE charityid = $id"); ?></div>
     </div>
 
     <h1 style = "margin-left:20%;">
@@ -146,7 +120,7 @@ else
     </h1>
 
     <div>
-          <div>  <?php echo  pg_query($db_connection, "SELECT charity_tag from charity WHERE charityid = $id"); ?></div>
+          <div>  <?php echo  pg_query($db, "SELECT charity_tag from charity WHERE charityid = $id"); ?></div>
     </div>
 
     <div>
