@@ -69,6 +69,7 @@
    } else {
       echo "Opened database successfully\n";
    }
+   
 ?>
 </h1>
 
@@ -84,7 +85,7 @@
         </div>
 
         <div class = "col-sm-4">
-          <h1><?php echo pg_query($db, "SELECT charity_name from charity WHERE charity_id = 1"); ?></h1>
+          <h1><?php echo pg_fetch_row(pg_query($db, "SELECT charity_name from charity WHERE charity_id = 1")); ?></h1>
         </div>
       </div>
     </div>
