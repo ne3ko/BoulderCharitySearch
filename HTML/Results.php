@@ -34,6 +34,7 @@
       echo "Error : Unable to open database\n";
    } 
    $name = pg_query($db, "SELECT charity_name, phone_number FROM charity WHERE categoie_name = $_GET["category"]");
+   $money = pg_query($db, "SELECT income, expenses, assets FROM financial INNER JOIN charity ON financial.charity_id = charity.charity_id WHERE category_name = $_GET["category"]");
    while($namelist = pg_fetch_row($name))
    {
    	$php_data1
