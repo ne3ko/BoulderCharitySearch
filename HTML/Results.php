@@ -35,7 +35,7 @@
    } 
    
 // this makes it specific to the value from the form
-   $catagory = $_GET['category']
+   $catagory = $_GET['category'];
    $query = sprintf("SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '%s'", pg_escape_string($catagory));
 
    $result = pg_query($db, $query);
