@@ -101,7 +101,7 @@ while ($row = pg_fetch_row($result)) {
         </div>
 
         <div class = "col-sm-4">
-          <h1 style = "margin-top:150px; font:Brawler; font-size:40px"><?php
+          <h1 style = "margin-left:100px; margin-top:150px; font:Brawler; font-size:40px"><?php
           $query = sprintf("SELECT charity_name FROM charity WHERE charity_id = '%s'", pg_escape_string($id));
           $result = pg_query($db, $query);
 
