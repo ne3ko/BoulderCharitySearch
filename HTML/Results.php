@@ -461,6 +461,8 @@
 	<style>
 		body{
 			background-color:#faece1 !important;
+			margin: 20 px;
+			padding: 20 px;
 			
 		}
 		button{
