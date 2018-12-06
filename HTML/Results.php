@@ -46,8 +46,8 @@
    	array_push($a, $row[0]);
    }
 
-
-								$php_data1=array(
+				$a = array_values($a);
+				$php_data1=array(
 						array("Charity Name",$a[0]),
 						array("Phone Number",$a[1]),
 						array("Assets",$a[2]),
