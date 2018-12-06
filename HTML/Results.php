@@ -573,6 +573,16 @@
 			<button id="next" style="width:20%;height:40px;" onclick="next()">NEXT PAGE</button>
 			</div>
 			
+						<form action="CharityReview.php" method="get">
+						<button  name="charity_id" type="submit" value="1">Link to review page for first charity</button>
+					</form>
+					<form action="CharityReview.php" method="get">
+						<button  name="charity_id" type="submit" value="2">Link to review page for second charity</button>
+					</form>
+					<form action="CharityReview.php" method="get">
+						<button  name="charity_id" type="submit" value="3">Link to review page for third charity</button>
+					</form>
+
 			
 	<footer>
   		<div class="footer_text">
