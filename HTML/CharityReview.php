@@ -13,23 +13,13 @@
     <link rel="stylesheet" href="AboutUs.css">
     <link rel="stylesheet" href="Header.css">
     <style>
-      .btn{
-          background-color: #BFA959 !important;
-          margin-top: 30px !important;
-          color: ##BFA959 !important;
-          font-family: 'Brawler', serif !important;
-      }
-
-      a
-      {
-        color: #2B1E14;
-      }
+	@import url('https://fonts.googleapis.com/css?family=Brawler|Lato:700')
+	h1 { font-family: 'Lato', sans-serif; }
     img
     {
       .logo 
       {
       max-height: 240px;
-      max-width: 240px;
       margin: 1em 5%;
       background-repeat: no-repeat; 
       background-size: cover; 
@@ -39,8 +29,9 @@
 
     body{
         background-color: #faece1 !important;
-
+		font-family: 'Brawler', serif;
       }
+	#summary { border-top: solid black 1px; padding-top: 2em; margin-right: 10%; margin-left: 10%; } 
 
     </style>
 
@@ -74,6 +65,7 @@
    $credentials = "user = crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
+   $query = "SELECT logo from charity WHERE charityid = 1";
    if(!$db) {
       echo "Error : Unable to open database\n";
    } 
@@ -102,7 +94,7 @@ while ($row = pg_fetch_row($result)) {
 
         <div class = "col-sm-4">
           <h1 style = "margin-top:100px;"><?php
-          $result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
+          $result = pg_query($db, "SELECT charity_name FROM charity");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -110,6 +102,7 @@ while ($row = pg_fetch_row($result)) {
 
             while ($row = pg_fetch_row($result)) {
             echo "$row[0]";
+            echo "<br />\n";
             }
           ?></h1>
         </div>
@@ -121,7 +114,7 @@ while ($row = pg_fetch_row($result)) {
         <!-- this is for the link to the charity and the financal break down link -->
         <!-- there is no test case -->
         <div class = "col-sm-4">
-          <button type="button" class= "btn btn-primary btn sm">
+          
             <a href = '<?php 
 
 $result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
@@ -134,17 +127,15 @@ while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
              ?>'> Link to Charity Webpage </a>
-           </button>
         </div>
 
         <div class = "col-sm-4">
             <!-- there is no test case -->
-            <button type="button" class= "btn btn-primary btn sm">
             <a href = '<?php 
 
-$result = pg_query($db, "SELECT irs_form FROM financial WHERE charity_id = 1");
+$result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
 if (!$result) {
-  echo "/";
+  echo "An error occurred.\n";
   exit;
 }
 
@@ -152,7 +143,6 @@ while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
              ?>'> Link to Charity IRS Form </a>
-           </button>
         </div>
 
       </div>
@@ -162,11 +152,11 @@ while ($row = pg_fetch_row($result)) {
       Charity Summary
     </h1>
 
-    <div>
+    <div id="summary">
       <!-- pull from the summary in the table -->     
-            <div style = "margin-left:10%">
+            <div>
             <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
+          $result = pg_query($db, "SELECT charity_description FROM charity");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -184,9 +174,9 @@ while ($row = pg_fetch_row($result)) {
       Financial Summary
     </h1>
 
-    <div>
+    <div id="summary">
           <div style = "margin-left:20%">  <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
+          $result = pg_query($db, "SELECT charity_description FROM charity");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
