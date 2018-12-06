@@ -97,7 +97,7 @@ while ($row = pg_fetch_row($result)) {
         </div>
 
         <div class = "col-sm-4">
-          <h1 style = "margin-top:100px;"><?php
+          <h1 style = "margin-top:150px; font:Trajan"><?php
           $result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
