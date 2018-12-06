@@ -154,7 +154,7 @@ while ($row = pg_fetch_row($result)) {
       </div>
     </div>
 
-    <h1 style = "margin-left:10%; font-family: 'Lato', sans-sherif; font-size:10px">
+    <h1 style = "margin-left:10%; font-family: 'Lato', sans-sherif; font-size:40px">
       Charity Summary
     </h1>
 
@@ -176,7 +176,7 @@ while ($row = pg_fetch_row($result)) {
     </div>
     </div>
 
-    <h1 style = "margin-left:10%; font-family: 'Lato', sans-sherif; font-size:10px>
+    <h1 style = "margin-left:10%; font-family: 'Lato', sans-sherif; font-size:40px">
       Financial Summary
     </h1>
 
