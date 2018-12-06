@@ -196,7 +196,7 @@ $query = sprintf("SELECT charity_description FROM charity WHERE charity_id = '%s
     <div id="summary">
           <div>  <?php
 
-$query = sprintf("SELECT logo FROM assets WHERE financial = '%s'", pg_escape_string($id));
+$query = sprintf("SELECT assets FROM financial WHERE charity_id = '%s'", pg_escape_string($id));
           $result = pg_query($db, $query);
 
            if (!$result) {
