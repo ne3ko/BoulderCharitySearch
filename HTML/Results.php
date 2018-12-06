@@ -216,23 +216,13 @@
 <!-- this is the function we php-->		
 
 		function makePage(){
-					if(page==1){
+	
 				name1=<?php echo json_encode($php_name1); ?>;
 				data1=<?php echo json_encode($php_data1); ?>;
 				
 				document.getElementById("title1").innerHTML=name1;
 				document.getElementById("body1").innerHTML="";
 
-				
-				data1 = [["Information", "value"],["Revenue", "$1000000000"],["Expenses", "$2"],["Assets", "$0"]];
-				}else{
-				
-				name1="nextpageworks"
-				document.getElementById("title1").innerHTML=name1;
-				document.getElementById("body1").innerHTML="help me god";
-				data1 = [["Information", "does it work"],["Revenue", "$1000000000"],["Expenses", "$2"],["Assets", "$0"]];
-				
-				}
 		
 				
 				
