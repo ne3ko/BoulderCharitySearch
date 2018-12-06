@@ -151,7 +151,7 @@ while ($row = pg_fetch_row($result)) {
       <!-- pull from the summary in the table -->     
             <div style = "margin-left:10%">
             <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity");
+          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -171,7 +171,7 @@ while ($row = pg_fetch_row($result)) {
 
     <div>
           <div style = "margin-left:20%">  <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity");
+          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
