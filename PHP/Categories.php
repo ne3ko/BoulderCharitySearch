@@ -21,7 +21,7 @@
 // this will give you in the order of name, phone, assets, income, expenses, tag, charity_id
 
 $row = pg_fetch_row($results);
-echo $row;
+echo $row[0];
 
 
       ?>
