@@ -82,7 +82,7 @@
             
             $php_data4=array(
                   array("Charity Name",$a[21]),
-                  array("Phone Number",$a[22),
+                  array("Phone Number",$a[22]),
                   array("Assets",$a[23]),
                   array("Income",$a[24]),
                   array("Expenses",$a[25])           
