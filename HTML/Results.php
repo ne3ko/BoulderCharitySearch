@@ -21,34 +21,18 @@
 		<link rel="stylesheet" href="Results.css">	
 		
 		<link rel="stylesheet" href="Header.css">
-			
-<body>
-	<div>
+				
 
-			<?php
-   $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
-   $port        = "port = 5432";
-   $dbname      = "dbname = d3scuneimo0uco";
-   $credentials = "user = crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52";
-
-   $db = pg_connect( "$host $port $dbname $credentials"  );
-   if(!$db) {
-      echo "Error : Unable to open database\n";
-   } 
-
-   $result = pg_query($db, "SELECT income, expenses, assets FROM financial INNER JOIN charity ON financial.charity_id = charity.charity_id WHERE category_name = 'Environment'");
-   if (!$result) {
-  echo "failure";
-  exit;
-}
-
-?>	
-</div>
-</body>
-		<script>
-			<!-- I think thiss is the value of income, expenses, assets array -->
-			getUserInfo(<?php echo json_encode($result); ?>)
-
+		<?php
+				$php_data1=array(
+						array("assets",100),
+						array("income",100),
+						array("expenses",10000000)				
+				);
+				$php_name1="does it work"
+		?>
+		
+		<script type="text/javascript">
 		<!-- initialization-->
 			var page=+1;
 			var data=[];
@@ -233,10 +217,13 @@
 
 		function makePage(){
 					if(page==1){
-				name1="temp1"
+				name1=<?php echo json_encode($php_name1); ?>;
+				data1=<?php echo json_encode($php_data1); ?>;
+				
 				document.getElementById("title1").innerHTML=name1;
-				document.getElementById("body1").innerHTML="testing a realy long namedfdf    fddff thas miT mfgim mf eeddffff      how many characters can fint odnfian dfigyasn jnsfj,kgnbaskjvbkjabgjakbfdjhkab fdf    mgasfnjnsjknfjfnk   jkfngjfngjflf f njfnjfkln nslnflsnjsd nfjd dfdf dddddddddddddd edd eeeeeeeeeeeee eeeeeeee ";
-			
+				document.getElementById("body1").innerHTML="";
+
+				
 				data1 = [["Information", "value"],["Revenue", "$1000000000"],["Expenses", "$2"],["Assets", "$0"]];
 				}else{
 				
@@ -246,22 +233,11 @@
 				data1 = [["Information", "does it work"],["Revenue", "$1000000000"],["Expenses", "$2"],["Assets", "$0"]];
 				
 				}
-				
-				
-				if(page==1){
-				name2="nextpageworks"
-				document.getElementById("title2").innerHTML=name2;
-				document.getElementById("body2").innerHTML="help me god";
-				data2 = [["Information", "does it work"],["Revenue", "$1000000000"],["Expenses", "$2"],["Assets", "$0"]];
-			
-				}else{
-				
+		
 				
 				
 				document.getElementById("title2").innerHTML=name2;
-				document.getElementById("body2").innerHTML="2";
-				
-				}
+				document.getElementById("body2").innerHTML="2";		
 				
 				
 				document.getElementById("title3").innerHTML=page;
@@ -292,6 +268,12 @@
 				document.getElementById("pagebU").innerHTML=page;
 				document.getElementById("pagesL").innerHTML=page-1;
 				document.getElementById("pagebL").innerHTML=page;
+		}
+		
+		
+		function getUserInfo(userObj){
+		
+		
 		}
 
 		</script>
