@@ -192,7 +192,7 @@ while ($row = pg_fetch_row($result)) {
             echo "Assets: $row[0] ";
               if (is_null($row[0]))
             {
-              echo "Value is unknown"
+              echo "Value is unknown";
             }
             echo "<br />\n";
             }
@@ -210,7 +210,7 @@ while ($row = pg_fetch_row($result)) {
             echo "Income: $row[0] ";
               if (is_null($row[0]))
             {
-              echo "Value is unknown"
+              echo "Value is unknown";
             }
             echo "<br />\n";
             }
@@ -229,7 +229,7 @@ while ($row = pg_fetch_row($result)) {
             echo "Expenses: $row[0] ";
             if (is_null($row[0]))
             {
-              echo "Value is unknown"
+              echo "Value is unknown";
             }
             echo "<br />\n";
             }
