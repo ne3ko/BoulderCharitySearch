@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="AboutUs.css">
     <link rel="stylesheet" href="Header.css">
     <style>
+      .btn{
+          background-color: #7d7b27 !important;
+          margin-top: 30px !important;
+          color: #faece1 !important
+          font-family: 'Brawler', serif !important;
+      }
+
     img
     {
       .logo 
@@ -28,6 +35,7 @@
 
     body{
         background-color: #faece1 !important;
+
       }
 
     </style>
@@ -109,7 +117,7 @@ while ($row = pg_fetch_row($result)) {
         <!-- this is for the link to the charity and the financal break down link -->
         <!-- there is no test case -->
         <div class = "col-sm-4">
-          
+          <button type="button" class= "btn btn-primary btn sm">
             <a href = '<?php 
 
 $result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
@@ -122,6 +130,7 @@ while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
              ?>'> Link to Charity Webpage </a>
+           </button>
         </div>
 
         <div class = "col-sm-4">
@@ -138,6 +147,7 @@ while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
              ?>'> Link to Charity IRS Form </a>
+
         </div>
 
       </div>
