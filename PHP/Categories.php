@@ -19,7 +19,7 @@
 
       <h1>
          <?php echo $_GET["category"];
-         $catagory = $_Get["category"];
+         $catagory = $_GET["category"];
          ?>
       </h1>
       
