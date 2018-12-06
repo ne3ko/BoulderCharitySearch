@@ -182,14 +182,42 @@ while ($row = pg_fetch_row($result)) {
 
     <div id="summary">
           <div>  <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
+          $result = pg_query($db, "SELECT assets FROM financial WHERE charity_id = 1");
            if (!$result) {
-            echo "An error occurred.\n";
+            echo "Value is unknown.\n";
             exit;
             }
 
             while ($row = pg_fetch_row($result)) {
-            echo "$row[0]";
+            echo "Assets: $row[0]";
+            echo "<br />\n";
+            }
+          ?>
+            
+          </div>
+                    <div>  <?php
+          $result = pg_query($db, "SELECT income FROM financial WHERE charity_id = 1");
+           if (!$result) {
+            echo "Value is unknown.\n";
+            exit;
+            }
+
+            while ($row = pg_fetch_row($result)) {
+            echo "Income: $row[0]";
+            echo "<br />\n";
+            }
+          ?>
+            
+          </div>
+                    <div>  <?php
+          $result = pg_query($db, "SELECT expenses FROM financial WHERE charity_id = 1");
+           if (!$result) {
+            echo "Value is unknown.\n";
+            exit;
+            }
+
+            while ($row = pg_fetch_row($result)) {
+            echo "Expenses: $row[0]";
             echo "<br />\n";
             }
           ?>
