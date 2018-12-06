@@ -154,7 +154,7 @@ while ($row = pg_fetch_row($result)) {
       </div>
     </div>
 
-    <h1>
+    <h1 style = "margin-left:10%;">
       Charity Summary
     </h1>
 
