@@ -35,11 +35,11 @@
    } 
    $results = pg_query($db, "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = $_GET["category"]");
 // this will give you in the order of name, phone, assets, income, expenses, tag, charity_id
-
+   $a = array();
    while($row = pg_fetch_row($results))
    {
    	// this is where you can fill in the array,
-   	$php_data1[] = 
+   	array_push($a, $row[0]);
    }
 
 
