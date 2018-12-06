@@ -22,6 +22,7 @@
 		
 		<link rel="stylesheet" href="Header.css">
 			
+			<body>
 			<h1>
 			<?php
    $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
@@ -39,7 +40,7 @@
    }
 ?>	
 </h1>
-	
+	</body>
 		<script>
 		<!-- initialization-->
 			var page=+1;
