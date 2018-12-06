@@ -22,8 +22,9 @@
 		
 		<link rel="stylesheet" href="Header.css">
 			
-			<body>
-			<h1>
+<body>
+	<div>
+
 			<?php
    $host        = "host = ec2-23-23-110-26.compute-1.amazonaws.com";
    $port        = "port = 5432";
@@ -34,13 +35,18 @@
    if(!$db) {
       echo "Error : Unable to open database\n";
    } 
-   else
-   {
-   	echo "success";
-   }
+
+   $result = pg_query($db, "SELECT income, expenses, assets FROM financial INNER JOIN charity ON financial.charity_id = charity.charity_id WHERE category_name = 'Environment';")
+   if (!$result) {
+  echo "failure";
+  exit;
+}
+
+while ($row = pg_fetch_row($result))
+	echo "$row[0]";
 ?>	
-</h1>
-	</body>
+</div>
+</body>
 		<script>
 		<!-- initialization-->
 			var page=+1;
