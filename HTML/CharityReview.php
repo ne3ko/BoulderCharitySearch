@@ -81,11 +81,31 @@
         <div class = "col-sm-4" >
           <!-- Will have a php command to fetch image url -->
           <!-- this query is mostly a guess so far for how to match to a forms data for the id -->
-          <img src = '<?php echo pg_query($db, $query) ?>' style='margin: 80px;max-height:450px; max-width:450px;'>
+          <img src = '<?php $result = pg_query($db, "SELECT logo FROM charity WHERE charity_id = 1");
+if (!$result) {
+  echo "/";
+  exit;
+}
+
+while ($row = pg_fetch_row($result)) {
+  echo "$row[0]";
+
+}?>' style='margin: 80px;max-height:450px; max-width:450px;'>
         </div>
 
         <div class = "col-sm-4">
-          <h1><?php echo pg_fetch_row(pg_query($db, "SELECT charity_name from charity WHERE charity_id = 1")); ?></h1>
+          <h1><?php
+          $result = pg_query($db, "SELECT charity_name FROM charity");
+           if (!$result) {
+            echo "An error occurred.\n";
+            exit;
+            }
+
+            while ($row = pg_fetch_row($result)) {
+            echo "$row[0]";
+            echo "<br />\n";
+            }
+          ?></h1>
         </div>
       </div>
     </div>
@@ -96,7 +116,19 @@
         <!-- there is no test case -->
         <div class = "col-sm-4">
           
-            <a href = '<?php echo pg_query($db, "SELECT url from charity WHERE charity_id = 1"); ?>'> Link to Charity Webpage </a>
+            <a href = '<?php 
+
+$result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
+}
+
+while ($row = pg_fetch_row($result)) {
+  echo "$row[0]";
+  echo "<br />\n";
+}
+             ?>'> Link to Charity Webpage </a>
         </div>
 
         <div class = "col-sm-4">

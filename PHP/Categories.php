@@ -25,7 +25,7 @@
        <?php
 
 
-$result = pg_query($db, "SELECT charity_name FROM charity");
+$result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
 if (!$result) {
   echo "An error occurred.\n";
   exit;
@@ -37,6 +37,23 @@ while ($row = pg_fetch_row($result)) {
 }
  
 ?>
+
+       <?php
+
+
+$result = pg_query($db, "SELECT charity_tag FROM charity WHERE charity_id = 1");
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
+}
+
+while ($row = pg_fetch_row($result)) {
+  echo "charity TAG =  $row[0] ";
+  echo "<br />\n";
+}
+ 
+?>
+
       </h1>
       </body>
 </html>
