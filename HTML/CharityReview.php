@@ -66,10 +66,7 @@
    $query = "SELECT logo from charity WHERE charityid = 1";
    if(!$db) {
       echo "Error : Unable to open database\n";
-   } else {
-      echo "Opened database successfully\n";
-   }
-   
+   } 
 ?>
 </h1>
 
@@ -90,7 +87,7 @@ if (!$result) {
 while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 
-}?>' style='margin: 80px;max-height:450px; max-width:450px;'>
+}?>' style='margin: 80px;max-height:250px; max-width:250px;'>
         </div>
 
         <div class = "col-sm-4">
@@ -126,14 +123,24 @@ if (!$result) {
 
 while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
-  echo "<br />\n";
 }
              ?>'> Link to Charity Webpage </a>
         </div>
 
         <div class = "col-sm-4">
             <!-- there is no test case -->
-            <a href = '<?php echo pg_query($db, "SELECT finance from charity WHERE charityid = 1"); ?>'> Link to Charity IRS Form </a>
+            <a href = '<?php 
+
+$result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
+}
+
+while ($row = pg_fetch_row($result)) {
+  echo "$row[0]";
+}
+             ?>'> Link to Charity IRS Form </a>
         </div>
 
       </div>
@@ -145,7 +152,18 @@ while ($row = pg_fetch_row($result)) {
 
     <div>
       <!-- pull from the summary in the table -->     
-            <div><?php echo pg_query($db, "SELECT charity_description from charity WHERE charityid = $id"); ?></div>
+            <div><?php
+          $result = pg_query($db, "SELECT charity_description FROM charity");
+           if (!$result) {
+            echo "An error occurred.\n";
+            exit;
+            }
+
+            while ($row = pg_fetch_row($result)) {
+            echo "$row[0]";
+            echo "<br />\n";
+            }
+          ?></div>
     </div>
 
     <h1 style = "margin-left:20%;">
@@ -153,7 +171,20 @@ while ($row = pg_fetch_row($result)) {
     </h1>
 
     <div>
-          <div>  <?php echo  pg_query($db, "SELECT charity_tag from charity WHERE charityid = $id"); ?></div>
+          <div>  <?php
+          $result = pg_query($db, "SELECT charity_description FROM charity");
+           if (!$result) {
+            echo "An error occurred.\n";
+            exit;
+            }
+
+            while ($row = pg_fetch_row($result)) {
+            echo "$row[0]";
+            echo "<br />\n";
+            }
+          ?>
+            
+          </div>
     </div>
 
     <div>
