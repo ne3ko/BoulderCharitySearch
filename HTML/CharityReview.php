@@ -128,7 +128,7 @@ while ($row = pg_fetch_row($result)) {
             <!-- there is no test case -->
             <a href = '<?php 
 
-$result = pg_query($db, "SELECT irs_link FROM financial WHERE charity_id = 1");
+$result = pg_query($db, "SELECT irs_form FROM financial WHERE charity_id = 1");
 if (!$result) {
   echo "/";
   exit;
