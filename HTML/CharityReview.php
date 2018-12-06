@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="Header.css">
     <style>
       .btn{
-          background-color: #7d7b27 !important;
+          background-color: #BFA959 !important;
           margin-top: 30px !important;
           color: ##BFA959 !important;
           font-family: 'Brawler', serif !important;
@@ -139,6 +139,7 @@ while ($row = pg_fetch_row($result)) {
 
         <div class = "col-sm-4">
             <!-- there is no test case -->
+            <button type="button" class= "btn btn-primary btn sm">
             <a href = '<?php 
 
 $result = pg_query($db, "SELECT irs_form FROM financial WHERE charity_id = 1");
@@ -151,7 +152,7 @@ while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
              ?>'> Link to Charity IRS Form </a>
-
+           </button>
         </div>
 
       </div>
