@@ -20,11 +20,8 @@
    $result = pg_query($db, $query);
 // this will give you in the order of name, phone, assets, income, expenses, tag, charity_id
 
-   while($row = pg_fetch_row($results))
-   {
-      // this is where you can fill in the array,
-      echo $row[0];
-   }
+$row = pg_fetch_row($results);
+echo $row;
 
 
       ?>
