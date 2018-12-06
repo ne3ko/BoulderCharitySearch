@@ -26,6 +26,7 @@
       // this is where you can fill in the array,
       array_push($a, $row[0]);
       echo $row[0];
+      echo ",";
    }
 
 echo a[0];
