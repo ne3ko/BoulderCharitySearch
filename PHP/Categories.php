@@ -31,9 +31,9 @@ if (!$result) {
   exit;
 }
 
-$row = pg_fetch_result($result);
-echo $row[0];
 
+echo $row[0];
+echo $row[1];
 // while ($row = pg_fetch_row($result)) {
 //   echo "charity name =  $row[0] ";
 //   echo "<br />\n";
