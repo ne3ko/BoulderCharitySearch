@@ -36,8 +36,6 @@
   </head>
   <body>
 
-    <!-- Header -->
-    <!-- Header -->
     <div class="header">
       <a href="Home.html"><img src="https://raw.githubusercontent.com/ne3ko/BoulderCharitySearch/master/Logo/BCSLogo1%20(Backgroundless).png" alt="BCS Logo"></a>
     </div>
@@ -46,9 +44,10 @@
     <nav class="navbar navbar-default"> 
       <div class="container">
         <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Categories</a></li>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Categories.html">Categories</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
       </div>
     </nav>
@@ -152,7 +151,8 @@ while ($row = pg_fetch_row($result)) {
 
     <div>
       <!-- pull from the summary in the table -->     
-            <div style = "margin-left:20%;><?php
+            <div style = "margin-left:20%">
+            <?php
           $result = pg_query($db, "SELECT charity_description FROM charity");
            if (!$result) {
             echo "An error occurred.\n";
@@ -163,7 +163,8 @@ while ($row = pg_fetch_row($result)) {
             echo "$row[0]";
             echo "<br />\n";
             }
-          ?></div>
+          ?>
+    </div>
     </div>
 
     <h1 style = "margin-left:20%;">
@@ -171,7 +172,7 @@ while ($row = pg_fetch_row($result)) {
     </h1>
 
     <div>
-          <div style = "margin-left:20%;>  <?php
+          <div style = "margin-left:20%">  <?php
           $result = pg_query($db, "SELECT charity_description FROM charity");
            if (!$result) {
             echo "An error occurred.\n";
