@@ -93,7 +93,7 @@ if (!$result) {
 while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 
-}?>' style='margin: 80px;max-height:250px; max-width:250px;'>
+}?>' style='margin: 80px; max-height:250px;'>
         </div>
 
         <div class = "col-sm-4">
@@ -154,7 +154,7 @@ while ($row = pg_fetch_row($result)) {
       </div>
     </div>
 
-    <h1 style = "margin-left:20%;">
+    <h1>
       Charity Summary
     </h1>
 
@@ -181,7 +181,7 @@ while ($row = pg_fetch_row($result)) {
     </h1>
 
     <div id="summary">
-          <div style = "margin-left:20%">  <?php
+          <div>  <?php
           $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
