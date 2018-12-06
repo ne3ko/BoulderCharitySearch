@@ -29,7 +29,8 @@
 						array("income",100),
 						array("expenses",10000000)				
 				);
-				$php_name1="does it work"
+				$php_name1="charityname"
+				$php_description1="charity description tag or text thing"
 		?>
 		
 		<script type="text/javascript">
@@ -37,15 +38,44 @@
 			var page=+1;
 			var data=[];
 			var name1="";
+			var data1=[];
+			var desc1="";
+			
 			var name2="";
+			var data2=[];
+			var desc2="";
+			
 			var name3="";
+			var data3=[];
+			var desc3="";
+			
 			var name4="";
+			var data4=[];
+			var desc4="";
+			
 			var name5="";
+			var data5=[];
+			var desc5="";
+			
 			var name6="";
+			var data6=[];
+			var desc6="";
+			
 			var name7="";
+			var data7=[];
+			var desc7="";
+			
 			var name8="";
+			var data8=[];
+			var desc8="";
+			
 			var name9="";
+			var data9=[];
+			var desc9="";
+			
 			var name10="";
+			var data10=[];
+			var desc10="";
 		
 		<!--	var catagory=-->
 		
@@ -186,7 +216,6 @@
 			});
 			return container.append(table);
 		}
-
 		function getTableData(table) {
 			var data = [];
 			table.find('tr').each(function (rowIndex, r) {
@@ -214,45 +243,86 @@
 				}
 		
 <!-- this is the function we php-->		
-
 		function makePage(){
 	
 				name1=<?php echo json_encode($php_name1); ?>;
 				data1=<?php echo json_encode($php_data1); ?>;
+				desc1=<?php echo json_encode($php_description1); ?>;
 				
 				document.getElementById("title1").innerHTML=name1;
-				document.getElementById("body1").innerHTML="";
-
-		
+				document.getElementById("body1").innerHTML=desc1;
 				
+				
+				name2=<?php echo json_encode($php_name2); ?>;
+				data2=<?php echo json_encode($php_data2); ?>;
+				desc2=<?php echo json_encode($php_description2); ?>;
 				
 				document.getElementById("title2").innerHTML=name2;
-				document.getElementById("body2").innerHTML="2";		
+				document.getElementById("body2").innerHTML=desc2;		
 				
 				
-				document.getElementById("title3").innerHTML=page;
-				document.getElementById("body3").innerHTML="3";
+				name3=<?php echo json_encode($php_name3); ?>;
+				data3=<?php echo json_encode($php_data3); ?>;
+				desc3=<?php echo json_encode($php_description3); ?>;
+				
+				document.getElementById("title3").innerHTML=name3;
+				document.getElementById("body3").innerHTML=desc3;
+				
+				
+				name4=<?php echo json_encode($php_name4); ?>;
+				data4=<?php echo json_encode($php_data4); ?>;
+				desc4=<?php echo json_encode($php_description4); ?>;
 				
 				document.getElementById("title4").innerHTML=name4;
-				document.getElementById("body4").innerHTML="4";
+				document.getElementById("body4").innerHTML=desc4;
+				
+				
+				name5=<?php echo json_encode($php_name5); ?>;
+				data5=<?php echo json_encode($php_data5); ?>;
+				desc5=<?php echo json_encode($php_description5); ?>;
 				
 				document.getElementById("title5").innerHTML=name5;
-				document.getElementById("body5").innerHTML="5";
+				document.getElementById("body5").innerHTML=desc5;
+				
+				
+				name6=<?php echo json_encode($php_name6); ?>;
+				data6=<?php echo json_encode($php_data6); ?>;
+				desc6=<?php echo json_encode($php_description6); ?>;
 				
 				document.getElementById("title6").innerHTML=name6;
-				document.getElementById("body6").innerHTML="6";
+				document.getElementById("body6").innerHTML=desc6;
+				
+				
+				name7=<?php echo json_encode($php_name7); ?>;
+				data7=<?php echo json_encode($php_data7); ?>;
+				desc7=<?php echo json_encode($php_description7); ?>;
 				
 				document.getElementById("title7").innerHTML=name7;
-				document.getElementById("body7").innerHTML="7";
+				document.getElementById("body7").innerHTML=desc7;
+				
+				
+				name8=<?php echo json_encode($php_name8); ?>;
+				data8=<?php echo json_encode($php_data8); ?>;
+				desc8=<?php echo json_encode($php_description8); ?>;
 				
 				document.getElementById("title8").innerHTML=name8;
-				document.getElementById("body8").innerHTML="8";
+				document.getElementById("body8").innerHTML=desc8;
+
+
+				name9=<?php echo json_encode($php_name9); ?>;
+				data9=<?php echo json_encode($php_data9); ?>;
+				desc9=<?php echo json_encode($php_description9); ?>;
 				
 				document.getElementById("title9").innerHTML=name9;
-				document.getElementById("body9").innerHTML="9";
+				document.getElementById("body9").innerHTML=desc9;
+
+
+				name10=<?php echo json_encode($php_name10); ?>;
+				data10=<?php echo json_encode($php_data10); ?>;
+				desc10=<?php echo json_encode($php_description10); ?>;
 				
 				document.getElementById("title10").innerHTML=name10;
-				document.getElementById("body10").innerHTML="10";
+				document.getElementById("body10").innerHTML=desc10;
 				
 				document.getElementById("pagesU").innerHTML=page-1;
 				document.getElementById("pagebU").innerHTML=page;
@@ -265,7 +335,6 @@
 		
 		
 		}
-
 		</script>
 		
 		
