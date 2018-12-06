@@ -33,11 +33,13 @@
    if(!$db) {
       echo "Error : Unable to open database\n";
    } 
-   $name = pg_query($db, "SELECT charity_name, phone_number FROM charity WHERE categoie_name = $_GET["category"]");
-   $money = pg_query($db, "SELECT income, expenses, assets FROM financial INNER JOIN charity ON financial.charity_id = charity.charity_id WHERE category_name = $_GET["category"]");
-   while($namelist = pg_fetch_row($name))
+   $results = pg_query($db, "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = $_GET["category"]");
+// this will give you in the order of name, phone, assets, income, expenses, tag, charity_id
+
+   while($row = pg_fetch_row($results))
    {
-   	$php_data1
+   	// this is where you can fill in the array,
+   	$php_data1[] = 
    }
 
 
