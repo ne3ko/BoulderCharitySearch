@@ -184,12 +184,16 @@ while ($row = pg_fetch_row($result)) {
           <div>  <?php
           $result = pg_query($db, "SELECT assets FROM financial WHERE charity_id = 1");
            if (!$result) {
-            echo "Value is unknown.\n";
+            echo "An error occured.\n";
             exit;
             }
 
             while ($row = pg_fetch_row($result)) {
-            echo "Assets: $row[0]";
+            echo "Assets: $row[0] ";
+              if ($row[0] is_null)
+            {
+              echo "Value is unknown"
+            }
             echo "<br />\n";
             }
           ?>
@@ -198,12 +202,16 @@ while ($row = pg_fetch_row($result)) {
                     <div>  <?php
           $result = pg_query($db, "SELECT income FROM financial WHERE charity_id = 1");
            if (!$result) {
-            echo "Value is unknown.\n";
+            echo "An error occured.\n";
             exit;
             }
 
             while ($row = pg_fetch_row($result)) {
-            echo "Income: $row[0]";
+            echo "Income: $row[0] ";
+                        if ($row[0] is_null)
+            {
+              echo "Value is unknown"
+            }
             echo "<br />\n";
             }
           ?>
@@ -212,12 +220,17 @@ while ($row = pg_fetch_row($result)) {
                     <div>  <?php
           $result = pg_query($db, "SELECT expenses FROM financial WHERE charity_id = 1");
            if (!$result) {
-            echo "Value is unknown.\n";
+            echo "An error occured.\n";
             exit;
             }
 
             while ($row = pg_fetch_row($result)) {
-            echo "Expenses: $row[0]";
+
+            echo "Expenses: $row[0] ";
+            if ($row[0] is_null)
+            {
+              echo "Value is unknown"
+            }
             echo "<br />\n";
             }
           ?>
