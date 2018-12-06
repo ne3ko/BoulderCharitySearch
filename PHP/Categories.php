@@ -31,6 +31,7 @@ if (!$result) {
   exit;
 }
 
+$row = pg_fetch_row($result)
 
 echo $row[0];
 
@@ -51,7 +52,7 @@ echo $row[1];
    </div>
 <h1>
 
-       <?php
+<!--        <?php
 
 
 $result = pg_query($db, "SELECT charity_tag FROM charity WHERE charity_id = 1");
@@ -65,7 +66,7 @@ while ($row = pg_fetch_row($result)) {
   echo "<br />\n";
 }
  
-?>
+?> -->
 
       </h1>
       </body>
