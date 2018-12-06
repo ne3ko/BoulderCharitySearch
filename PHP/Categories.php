@@ -31,7 +31,7 @@ if (!$result) {
   exit;
 }
 
-$row = pg_fetch_row($result)
+$row = pg_fetch_row($result);
 
 echo $row[0];
 
