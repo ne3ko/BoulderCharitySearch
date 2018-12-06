@@ -97,7 +97,7 @@ while ($row = pg_fetch_row($result)) {
         </div>
 
         <div class = "col-sm-4">
-          <h1 style = "margin-top:150px; font:Trajan"><?php
+          <h1 style = "margin-top:150px; font:Brawler"><?php
           $result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
@@ -154,7 +154,7 @@ while ($row = pg_fetch_row($result)) {
       </div>
     </div>
 
-    <h1 style = "margin-left:10%;">
+    <h1 style = "margin-left:10%; font-family: 'Lato', sans-sherif; font-size:10px">
       Charity Summary
     </h1>
 
@@ -176,7 +176,7 @@ while ($row = pg_fetch_row($result)) {
     </div>
     </div>
 
-    <h1 style = "margin-left:10%;">
+    <h1 style = "margin-left:10%; font-family: 'Lato', sans-sherif; font-size:10px>
       Financial Summary
     </h1>
 
