@@ -28,7 +28,8 @@
    }
 
 echo a[0];
-
+echo a[1];
+echo a[2];
 
  $php_data1=array(
                   array("Charity Name",$a[0]),
