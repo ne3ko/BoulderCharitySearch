@@ -14,7 +14,7 @@
       echo "Error : Unable to open database\n";
    } 
    
-   $catagory = 'Health';
+   $catagory = $_GET['category'];
 // this makes it specific to the value from the form
    $query = sprintf("SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '%s'", pg_escape_string($catagory));
 
@@ -26,12 +26,8 @@
       // this is where you can fill in the array,
       array_push($a, $row[0]);
       echo $row[0];
-      echo ",";
    }
 
-echo a[0];
-echo a[1];
-echo a[2];
 
  $php_data1=array(
                   array("Charity Name",$a[0]),
@@ -43,7 +39,6 @@ echo a[2];
             
             $php_name1=$a[0];
             $php_description1=$a[5];
-            echo $php_name1;
             
             $php_data2=array(
                   array("Charity Name",$a[7]),
@@ -55,8 +50,7 @@ echo a[2];
             
             $php_name2=$a[7];
             $php_description2=$a[12];
-            echo " next ";
-                        echo $php_name2;
+
             
             $php_data3=array(
                   array("Charity Name",$a[14]),
