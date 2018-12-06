@@ -71,7 +71,7 @@
             
             $php_data3=array(
                   array("Charity Name",$a[14]),
-                  array("Phone Number",$a[15),
+                  array("Phone Number",$a[15]),
                   array("Assets",$a[16]),
                   array("Income",$a[17]),
                   array("Expenses",$a[18])           
