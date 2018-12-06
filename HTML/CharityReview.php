@@ -73,6 +73,8 @@
    if(!$db) {
       echo "Error : Unable to open database\n";
    } 
+   $id = $_GET["charity_id"];
+
 ?>
 </h1>
 
@@ -84,7 +86,9 @@
         <div class = "col-sm-4" >
           <!-- Will have a php command to fetch image url -->
           <!-- this query is mostly a guess so far for how to match to a forms data for the id -->
-          <img src = '<?php $result = pg_query($db, "SELECT logo FROM charity WHERE charity_id = 1");
+          <img src = '<?php 
+          $query = sprintf("SELECT logo FROM charity WHERE charity_id = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
 if (!$result) {
   echo "/";
   exit;
@@ -98,7 +102,9 @@ while ($row = pg_fetch_row($result)) {
 
         <div class = "col-sm-4">
           <h1 style = "margin-top:150px; font:Brawler; font-size:40px"><?php
-          $result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
+          $query = sprintf("SELECT charity_name FROM charity WHERE charity_id = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
+
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -120,7 +126,9 @@ while ($row = pg_fetch_row($result)) {
           <button type = "button" class = "btn">
             <a href = '<?php 
 
-$result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
+$query = sprintf("SELECT url FROM charity WHERE charity_id = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
+
 if (!$result) {
   echo "An error occurred.\n";
   exit;
@@ -138,7 +146,9 @@ while ($row = pg_fetch_row($result)) {
             <button type = "button" class = "btn">
             <a href = '<?php 
 
-$result = pg_query($db, "SELECT irs_form FROM financial WHERE charity_id = 1");
+$query = sprintf("SELECT irs_form FROM financial WHERE charity_id = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
+
 if (!$result) {
   echo "/";
   exit;
@@ -162,7 +172,10 @@ while ($row = pg_fetch_row($result)) {
       <!-- pull from the summary in the table -->     
             <div>
             <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
+
+$query = sprintf("SELECT charity_description FROM charity WHERE charity_id = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
+
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -182,7 +195,10 @@ while ($row = pg_fetch_row($result)) {
 
     <div id="summary">
           <div>  <?php
-          $result = pg_query($db, "SELECT assets FROM financial WHERE charity_id = 1");
+
+$query = sprintf("SELECT logo FROM assets WHERE financial = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
+
            if (!$result) {
             echo "An error occured.\n";
             exit;
@@ -200,7 +216,10 @@ while ($row = pg_fetch_row($result)) {
             
           </div>
                     <div>  <?php
-          $result = pg_query($db, "SELECT income FROM financial WHERE charity_id = 1");
+
+$query = sprintf("SELECT income FROM financial WHERE charity_id = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
+
            if (!$result) {
             echo "An error occured.\n";
             exit;
@@ -218,7 +237,9 @@ while ($row = pg_fetch_row($result)) {
             
           </div>
                     <div>  <?php
-          $result = pg_query($db, "SELECT expenses FROM financial WHERE charity_id = 1");
+                    $query = sprintf("SELECT expenses FROM financial WHERE charity_id = '%s'", pg_escape_string($id));
+          $result = pg_query($db, $query);
+
            if (!$result) {
             echo "An error occured.\n";
             exit;
