@@ -151,7 +151,7 @@ while ($row = pg_fetch_row($result)) {
 
     <div>
       <!-- pull from the summary in the table -->     
-            <div style = "margin-left:20%">
+            <div style = "margin-left:10%">
             <?php
           $result = pg_query($db, "SELECT charity_description FROM charity");
            if (!$result) {
@@ -167,7 +167,7 @@ while ($row = pg_fetch_row($result)) {
     </div>
     </div>
 
-    <h1 style = "margin-left:20%;">
+    <h1 style = "margin-left:10%;">
       Financial Summary
     </h1>
 
