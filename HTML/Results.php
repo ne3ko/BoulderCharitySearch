@@ -42,12 +42,13 @@
   exit;
 }
 
-while ($row = pg_fetch_row($result))
-	echo "$row[0]";
 ?>	
 </div>
 </body>
 		<script>
+			<!-- I think thiss is the value of income, expenses, assets array -->
+			getUserInfo(<?php echo json_encode($result); ?>)
+
 		<!-- initialization-->
 			var page=+1;
 			var data=[];
