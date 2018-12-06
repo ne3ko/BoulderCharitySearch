@@ -26,6 +26,11 @@
       border-radius: 8px;
     }
   }
+  .btn{
+    background-color: #7d7b27 !important;
+    color: #faece1 !important;
+    font-family: 'Brawler', serif !important;
+  }
 
     body{
         background-color: #faece1 !important;
@@ -65,7 +70,6 @@
    $credentials = "user = crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
-   $query = "SELECT logo from charity WHERE charityid = 1";
    if(!$db) {
       echo "Error : Unable to open database\n";
    } 
@@ -94,7 +98,7 @@ while ($row = pg_fetch_row($result)) {
 
         <div class = "col-sm-4">
           <h1 style = "margin-top:100px;"><?php
-          $result = pg_query($db, "SELECT charity_name FROM charity");
+          $result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -102,7 +106,6 @@ while ($row = pg_fetch_row($result)) {
 
             while ($row = pg_fetch_row($result)) {
             echo "$row[0]";
-            echo "<br />\n";
             }
           ?></h1>
         </div>
@@ -114,7 +117,7 @@ while ($row = pg_fetch_row($result)) {
         <!-- this is for the link to the charity and the financal break down link -->
         <!-- there is no test case -->
         <div class = "col-sm-4">
-          
+          <button type = "button" class = "btn">
             <a href = '<?php 
 
 $result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
@@ -127,15 +130,17 @@ while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
              ?>'> Link to Charity Webpage </a>
+           </button>
         </div>
 
         <div class = "col-sm-4">
             <!-- there is no test case -->
+            <button type = "button" class = "btn">
             <a href = '<?php 
 
-$result = pg_query($db, "SELECT url FROM charity WHERE charity_id = 1");
+$result = pg_query($db, "SELECT irs_form FROM financial WHERE charity_id = 1");
 if (!$result) {
-  echo "An error occurred.\n";
+  echo "/";
   exit;
 }
 
@@ -143,6 +148,7 @@ while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
              ?>'> Link to Charity IRS Form </a>
+           </button>
         </div>
 
       </div>
@@ -156,7 +162,7 @@ while ($row = pg_fetch_row($result)) {
       <!-- pull from the summary in the table -->     
             <div>
             <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity");
+          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -176,7 +182,7 @@ while ($row = pg_fetch_row($result)) {
 
     <div id="summary">
           <div style = "margin-left:20%">  <?php
-          $result = pg_query($db, "SELECT charity_description FROM charity");
+          $result = pg_query($db, "SELECT charity_description FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
