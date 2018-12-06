@@ -33,7 +33,7 @@ if (!$result) {
 
 
 echo $row[0];
-echo $row[1];
+
 // while ($row = pg_fetch_row($result)) {
 //   echo "charity name =  $row[0] ";
 //   echo "<br />\n";
@@ -41,6 +41,14 @@ echo $row[1];
  
 ?>
 </h1>
+<div>
+<?php
+
+echo $row[1];
+
+?>
+
+   </div>
 <h1>
 
        <?php
