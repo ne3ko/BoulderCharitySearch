@@ -16,10 +16,14 @@
       .btn{
           background-color: #7d7b27 !important;
           margin-top: 30px !important;
-          color: #faece1 !important
+          color: ##BFA959 !important;
           font-family: 'Brawler', serif !important;
       }
 
+      a
+      {
+        color: #2B1E14;
+      }
     img
     {
       .logo 
