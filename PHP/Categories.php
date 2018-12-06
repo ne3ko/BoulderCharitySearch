@@ -20,14 +20,13 @@
    $result = pg_query($db, $query);
 // this will give you in the order of name, phone, assets, income, expenses, tag, charity_id
    $a = array();
-      $a_better=array();
    while($row = pg_fetch_row($results))
    {
       // this is where you can fill in the array,
       array_push($a, $row[0]);
    }
- $a_better = array_values($a);
-            $php_data1=array(
+
+ $php_data1=array(
                   array("Charity Name",$a[0]),
                   array("Phone Number",$a[1]),
                   array("Assets",$a[2]),
@@ -49,10 +48,11 @@
             
             $php_name2=$a[7];
             $php_description2=$a[12];
+                        echo $php_name2;
             
             $php_data3=array(
                   array("Charity Name",$a[14]),
-                  array("Phone Number",$a[15),
+                  array("Phone Number",$a[15]),
                   array("Assets",$a[16]),
                   array("Income",$a[17]),
                   array("Expenses",$a[18])           
@@ -63,7 +63,7 @@
             
             $php_data4=array(
                   array("Charity Name",$a[21]),
-                  array("Phone Number",$a[22),
+                  array("Phone Number",$a[22]),
                   array("Assets",$a[23]),
                   array("Income",$a[24]),
                   array("Expenses",$a[25])           
@@ -132,6 +132,7 @@
             
             $php_name10=$a[63];
             $php_description10=$a[68];
+
       ?>
       </h1>
 
