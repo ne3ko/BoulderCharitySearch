@@ -1,0 +1,48 @@
+
+table.popTable {
+  border: 1px solid black;
+  width: 30%;
+  height: 40%;
+  text-align: right;
+  border-collapse: collapse;
+  float: right;
+}
+table.popTable td, table.popTable th {
+  border: 1px solid black;
+  padding: 10px 10px;
+}
+table.popTable tbody td {
+  font-size: 30px;
+}
+table.popTable tr:nth-child(odd) {
+  background: #BFA959;
+}
+table.popTable tr:nth-child(even) {
+  background: #FAECE3;
+}
+table.popTable thead {
+  background: #BFA959;
+ 
+  border-bottom: 2px solid black;
+}
+table.popTable thead th {
+  font-size: 25px;
+  font-weight: bold;
+  color: #BFA959;
+  border-left: 2px solid #BFA959;
+}
+table.popTable thead th:first-child {
+  border-left: none;
+}
+
+table.popTable tfoot {
+  font-size: 25px;
+  font-weight: bold;
+}
+table.popTable tfoot td {
+  font-size: 25px;
+}
+table.popTable tfoot .links {
+  text-align: right;
+}
+
