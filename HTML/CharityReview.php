@@ -128,7 +128,7 @@ while ($row = pg_fetch_row($result)) {
             <!-- there is no test case -->
             <a href = '<?php 
 
-$result = pg_query($db, "SELECT financial FROM charity WHERE charity_id = 1");
+$result = pg_query($db, "SELECT Financial FROM charity WHERE charity_id = 1");
 if (!$result) {
   echo "An error occurred.\n";
   exit;
