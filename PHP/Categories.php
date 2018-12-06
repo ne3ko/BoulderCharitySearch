@@ -23,9 +23,9 @@
       
        <h1>
        <?php
+$category = $_GET["category"];
 
-
-   $result = pg_query($db, "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = $_GET["category"]");
+   $result = pg_query($db, "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = $category");
 if (!$result) {
   echo "NOOOOOO.\n";
   exit;
