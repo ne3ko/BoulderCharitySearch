@@ -18,12 +18,14 @@
       </h1>
 
       <h1>
-         <?php echo $_GET["category"];?>
+         <?php echo $_GET["category"];
+         $catagory = $_Get["category"];
+         ?>
       </h1>
       
        <h1>
        <?php
-$query = "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '" . $_Get["category"] . "'";
+$query = "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '" . $catagory . "'";
 
    $result = pg_query($db, $query);
 if (!$result) {
