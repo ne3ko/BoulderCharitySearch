@@ -23,7 +23,7 @@
       
        <h1>
        <?php
-$query = "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '" . $_Get["category"] . "';";
+$query = "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '" . $_Get["category"] . "'";
 
    $result = pg_query($db, $query);
 if (!$result) {
@@ -52,6 +52,7 @@ echo $row[0];
    </div>
    <div>
 <?php
+echo "this is the query ";
 echo $query;
 ?>
 
