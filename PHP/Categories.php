@@ -26,6 +26,9 @@
       array_push($a, $row[0]);
    }
 
+echo a[0];
+
+
  $php_data1=array(
                   array("Charity Name",$a[0]),
                   array("Phone Number",$a[1]),
@@ -34,7 +37,7 @@
                   array("Expenses",$a[4])            
             );
             
-            $php_name1=$a_[0];
+            $php_name1=$a[0];
             $php_description1=$a[5];
             echo $php_name1;
             
