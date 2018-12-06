@@ -45,8 +45,14 @@ echo $row[6];
 <div>
 <?php
 
-echo $row[1];
+echo $row[0];
 
+?>
+
+   </div>
+   <div>
+<?php
+echo $query;
 ?>
 
    </div>
