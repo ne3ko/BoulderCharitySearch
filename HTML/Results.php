@@ -25,6 +25,7 @@
 
 		<?php
 				$php_data1=array(
+						array("charity name","phone number")
 						array("assets",100),
 						array("income",100),
 						array("expenses",10000000)				
