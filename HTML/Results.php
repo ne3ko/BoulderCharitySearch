@@ -33,7 +33,11 @@
    if(!$db) {
       echo "Error : Unable to open database\n";
    } 
-   $results = pg_query($db, "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = $_GET["category"]");
+   
+// this makes it specific to the value from the form
+   $query = sprintf("SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '%s'", pg_escape_string($catagory));
+
+   $result = pg_query($db, $query);
 // this will give you in the order of name, phone, assets, income, expenses, tag, charity_id
    $a = array();
    while($row = pg_fetch_row($results))
