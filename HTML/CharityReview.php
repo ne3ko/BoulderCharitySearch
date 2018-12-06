@@ -130,7 +130,7 @@ while ($row = pg_fetch_row($result)) {
 
 $result = pg_query($db, "SELECT Financial FROM charity WHERE charity_id = 1");
 if (!$result) {
-  echo "An error occurred.\n";
+  echo "/";
   exit;
 }
 
