@@ -30,8 +30,8 @@
 						array("income",100),
 						array("expenses",10000000)				
 				);
-				$php_name1="charityname"
-				$php_description1="charity description tag or text thing"
+				$php_name1="charityname";
+				$php_description1="charity description tag or text thing";
 		?>
 		
 		<script type="text/javascript">
