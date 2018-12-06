@@ -36,7 +36,7 @@
       echo "Error : Unable to open database\n";
    } 
 
-   $result = pg_query($db, "SELECT income, expenses, assets FROM financial INNER JOIN charity ON financial.charity_id = charity.charity_id WHERE category_name = 'Environment';")
+   $result = pg_query($db, "SELECT income, expenses, assets FROM financial INNER JOIN charity ON financial.charity_id = charity.charity_id WHERE category_name = 'Environment'");
    if (!$result) {
   echo "failure";
   exit;
