@@ -62,7 +62,6 @@
    $credentials = "user = crizzbzbapugiv password=c31154c5b8b6fc32b6499b57032a8a9242e1419fc0b785d6bd94dca146dafb52";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
-   $query = "SELECT logo from charity WHERE charityid = 1";
    if(!$db) {
       echo "Error : Unable to open database\n";
    } 
@@ -91,7 +90,7 @@ while ($row = pg_fetch_row($result)) {
 
         <div class = "col-sm-4">
           <h1 style = "margin-top:100px;"><?php
-          $result = pg_query($db, "SELECT charity_name FROM charity");
+          $result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
            if (!$result) {
             echo "An error occurred.\n";
             exit;
@@ -99,7 +98,6 @@ while ($row = pg_fetch_row($result)) {
 
             while ($row = pg_fetch_row($result)) {
             echo "$row[0]";
-            echo "<br />\n";
             }
           ?></h1>
         </div>
