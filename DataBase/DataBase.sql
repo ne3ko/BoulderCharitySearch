@@ -1,4 +1,4 @@
--- Script to auto populate our database
+﻿-- Script to auto populate our database
 -- Author: Nikolai Alexander
 
 -- Delete tables to avoid duplicte entries
@@ -8,11 +8,11 @@ DROP TABLE if exists charity, financial;
 -- Recreate tables
 create table if not exists charity(
 	charity_id serial, 
-	charity_name varchar(60) not null, 
+	charity_name varchar(100) not null, 
 	address varchar(70) not null,
 	city varchar(20) not null,
 	state varchar(2) not null,
-	zipcode varchar(5) not null,
+	zipcode varchar(6) not null,
 	url varchar(200),
 	phone_number varchar(12),
 	email varchar(100),
@@ -36,9 +36,9 @@ create table if not exists financial(
 
 -- Copy information from charity.csv and financial.csv
 COPY charity
-FROM 'charity.csv'
+FROM 'DataBase/charity.csv'
 DELIMITERS ',' CSV;
 
 COPY financial
-FROM 'financial.csv'
+FROM 'DataBase/financial.csv'
 DELIMITERS ',' CSV;

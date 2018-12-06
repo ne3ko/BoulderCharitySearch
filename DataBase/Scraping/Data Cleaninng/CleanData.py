@@ -36,9 +36,20 @@ def clean_data(data) :
 
 	if 'charity_description' in data :
 		data['charity_description'] = data['charity_description'].str.replace('\n','<br>')
+		# Delete rows that go over character limit
+		for index, row in data.iterrows() :
+			if len(row['charity_description']) > 2000 :
+				print(len(row['charity_description']))
+				data = data[data.charity_description != row['charity_description']]
+
 
 	if 'charity_tag' in data :
 		data['charity_tag'] = data['charity_tag'].str.replace('\n',' ')
+		# Delete rows that go over character limit
+		for index, row in data.iterrows() :
+			if len(row['charity_tag']) > 800 :
+				print(len(row['charity_tag']))
+				data = data[data.charity_tag != row['charity_tag']]
 
 
 
@@ -47,17 +58,17 @@ def clean_data(data) :
 def main() : 
 	data = read_data()
 
-	charity = data.iloc[:,:13]
+
+	data = clean_data(data)
+
+	charity = data.iloc[:,0:13]
 	financial = data.iloc[:,13:]
 
 	# print(list(charity))
 	# print(list(financial))
 
-	charity = clean_data(charity)
-	financial = clean_data(financial)
-
-	charity.to_csv('../../charity.csv', encoding = 'utf-8')
-	financial.to_csv('../../financial.csv', encoding = 'utf-8')
+	charity.to_csv('../../charity.csv', encoding = 'utf-8', index = False)
+	financial.to_csv('../../financial.csv', encoding = 'utf-8', index = False)
 
 	return
 
