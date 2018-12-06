@@ -25,16 +25,18 @@
        <?php
 
 
-$result = pg_query($db, "SELECT charity_name FROM charity WHERE charity_id = 1");
+   $results = pg_query($db, "SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = 'Environment'");
 if (!$result) {
   echo "An error occurred.\n";
   exit;
 }
 
-while ($row = pg_fetch_row($result)) {
-  echo "charity name =  $row[0] ";
-  echo "<br />\n";
-}
+echo $result[0];
+
+// while ($row = pg_fetch_row($result)) {
+//   echo "charity name =  $row[0] ";
+//   echo "<br />\n";
+// }
  
 ?>
 
