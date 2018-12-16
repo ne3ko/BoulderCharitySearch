@@ -538,9 +538,12 @@
 			<br/>
 			
 			<div id="item10" onmouseover="myF10()" onclick="goThere()">
-				<span id="title10"> <?php echo json_encode($php_name1); ?> </span>
+				<span id="title10"> <?php echo $php_name1 ?> </span>
 			
-				<p id="body10"> <?php echo json_encode($php_name3); ?></p>
+				<p id="body10"> 
+					<?php echo json_encode($php_name3); ?>
+					<?php print_r ($a)?>
+				</p>
 			</div>
 		<p>Charity Results <span id="pagesL"></span>1 through <span id="pagebL"></span>0</p>
 		<div>
