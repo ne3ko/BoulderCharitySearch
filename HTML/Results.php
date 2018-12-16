@@ -73,7 +73,7 @@
                   array("Income",$a[2]['income']),
                   array("Expenses",$a[2]['expenses'])           
             );
-           $php_name3=implode($a[2]['charity_name']);
+           $php_name3=$a[2]['charity_name'];
             $php_description3=$a[2]['charity_tag'];
             
             
