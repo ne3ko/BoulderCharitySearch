@@ -44,7 +44,7 @@
 	
    
             $php_data1=array(
-                  array("Charity Name",echo $a[0].[0]),
+                  array("Charity Name",$a[0].[0]),
                   array("Phone Number",$a[0].[1]),
                   array("Assets",$a[0].[2]),
                   array("Income",$a[0].[3]),
@@ -56,7 +56,7 @@
             
             
             $php_data2=array(
-                  array("Charity Name",print_r ($a[1].[0])),
+                  array("Charity Name",($a[1].[0])),
                   array("Phone Number",$a[1].[1]),
                   array("Assets",$a[1].[2]),
                   array("Income",$a[1].[3]),
@@ -67,7 +67,7 @@
 				$php_description2=$a[1].[5];
             
             $php_data3=array(
-                  array("Charity Name",echo $a[2].['charity_name']),
+                  array("Charity Name",$a[2].['charity_name']),
                   array("Phone Number",$a[2].['phone_number']),
                   array("Assets",$a[2].['assets']),
                   array("Income",$a[2].['income']),
