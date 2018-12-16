@@ -38,33 +38,31 @@
    $query = sprintf("SELECT charity_name, phone_number, assets, income, expenses, charity_tag, charity.charity_id FROM charity INNER JOIN financial ON financial.charity_id = charity.charity_id WHERE category_name = '%s'", pg_escape_string($catagory));
    $result = pg_query($db, $query);
 // this will give you in the order of name, phone, assets, income, expenses, tag, charity_id
-
  
 	$a=pg_fetch_all($result);
 	
    
+             
             $php_data1=array(
-                  array("Charity Name",$a[0].[0]),
-                  array("Phone Number",$a[0].[1]),
-                  array("Assets",$a[0].[2]),
-                  array("Income",$a[0].[3]),
-                  array("Expenses",$a[0].[4])            
+                  array("Charity Name",$a[0]['charity_name']),
+                  array("Phone Number",$a[0]['phone_number']),
+                  array("Assets",$a[0]['assets']),
+                  array("Income",$a[0]['income']),
+                  array("Expenses",$a[0]['expenses'])           
             );
-            
-            $php_name1=implode($catagory);
-            $php_description1=$a[0].[5];
-            
-            
+           $php_name1=$a[0]['charity_name'];
+            $php_description1=$a[0]['charity_tag'];
+			
             $php_data2=array(
-                  array("Charity Name",($a[1][0])),
-                  array("Phone Number",$a[1][1]),
-                  array("Assets",$a[1][2]),
-                  array("Income",$a[1][3]),
-                  array("Expenses",$a[1][4])           
+                  array("Charity Name",$a[1]['charity_name']),
+                  array("Phone Number",$a[1]['phone_number']),
+                  array("Assets",$a[1]['assets']),
+                  array("Income",$a[1]['income']),
+                  array("Expenses",$a[1]['expenses'])           
             );
-            
-			    $php_name2=$a[1].[7];
-				$php_description2=$a[1].[5];
+           $php_name2=$a[1]['charity_name'];
+            $php_description2=$a[1]['charity_tag'];
+			
             
             $php_data3=array(
                   array("Charity Name",$a[2]['charity_name']),
@@ -76,68 +74,70 @@
            $php_name3=$a[2]['charity_name'];
             $php_description3=$a[2]['charity_tag'];
             
-            
             $php_data4=array(
-                  array("Charity Name",$a[10].[21]),
-                  array("Phone Number",$a[10].[22]),
-                  array("Assets",$a[10].[23]),
-                  array("Income",$a[10].[24]),
-                  array("Expenses",$a[10].[25])           
+                  array("Charity Name",$a[3]['charity_name']),
+                  array("Phone Number",$a[3]['phone_number']),
+                  array("Assets",$a[3]['assets']),
+                  array("Income",$a[3]['income']),
+                  array("Expenses",$a[3]['expenses'])           
             );
-            
-            $php_name4=$a[10].[21];
-            $php_description4=$a[10].[26];
-            
-            $php_data5=array(
-                  array("Charity Name",$a[10].[28]),
-                  array("Phone Number",$a[10].[29]),
-                  array("Assets",$a[10].[30]),
-                  array("Income",$a[10].[31]),
-                  array("Expenses",$a[10].[32])           
+           $php_name4=$a[3]['charity_name'];
+            $php_description4=$a[3]['charity_tag'];
+			$php_data5=array(
+                  array("Charity Name",$a[4]['charity_name']),
+                  array("Phone Number",$a[4]['phone_number']),
+                  array("Assets",$a[4]['assets']),
+                  array("Income",$a[4]['income']),
+                  array("Expenses",$a[4]['expenses'])           
             );
-            
-            $php_name5=$a[10].[28];
-            $php_description5=$a[10].[33];
-            $php_data6=array(
-                  array("Charity Name",$a[10].[35]),
-                  array("Phone Number",$a[10].[36]),
-                  array("Assets",$a[10].[37]),
-                  array("Income",$a[10].[38]),
-                  array("Expenses",$a[10].[39])           
+           $php_name5=$a[4]['charity_name'];
+            $php_description5=$a[4]['charity_tag'];
+			$php_data6=array(
+                  array("Charity Name",$a[5]['charity_name']),
+                  array("Phone Number",$a[5]['phone_number']),
+                  array("Assets",$a[5]['assets']),
+                  array("Income",$a[5]['income']),
+                  array("Expenses",$a[5]['expenses'])           
             );
-            
-            $php_name6=$a[10].[35];
-            $php_description6=$a[10].[40];
-            $php_data7=array(
-                  array("Charity Name",$a[10].[42]),
-                  array("Phone Number",$a[10].[43]),
-                  array("Assets",$a[10].[44]),
-                  array("Income",$a[10].[45]),
-                  array("Expenses",$a[10].[46])           
+           $php_name6=$a[5]['charity_name'];
+            $php_description6=$a[5]['charity_tag'];
+			$php_data7=array(
+                  array("Charity Name",$a[6]['charity_name']),
+                  array("Phone Number",$a[6]['phone_number']),
+                  array("Assets",$a[6]['assets']),
+                  array("Income",$a[6]['income']),
+                  array("Expenses",$a[6]['expenses'])           
             );
-            
-            $php_name7=$a[10].[42];
-            $php_description7=$a[10].[47];
-            $php_data8=array(
-                  array("Charity Name",$a[10].[49]),
-                  array("Phone Number",$a[10].[50]),
-                  array("Assets",$a[10].[51]),
-                  array("Income",$a[10].[52]),
-                  array("Expenses",$a[10].[53])           
+           $php_name7=$a[6]['charity_name'];
+            $php_description7=$a[6]['charity_tag'];
+			$php_data8=array(
+                  array("Charity Name",$a[7]['charity_name']),
+                  array("Phone Number",$a[7]['phone_number']),
+                  array("Assets",$a[7]['assets']),
+                  array("Income",$a[7]['income']),
+                  array("Expenses",$a[7]['expenses'])           
             );
-            
-            $php_name8=$a[10].[49];
-            $php_description8=$a[10].[54];
-            $php_data9=array(
-                  array("Charity Name",$a[10].[56]),
-                  array("Phone Number",$a[10].[57]),
-                  array("Assets",$a[10].[58]),
-                  array("Income",$a[10].[59]),
-                  array("Expenses",$a[10].[60])           
+           $php_name8=$a[7]['charity_name'];
+            $php_description8=$a[7]['charity_tag'];
+			$php_data9=array(
+                  array("Charity Name",$a[8]['charity_name']),
+                  array("Phone Number",$a[8]['phone_number']),
+                  array("Assets",$a[8]['assets']),
+                  array("Income",$a[8]['income']),
+                  array("Expenses",$a[8]['expenses'])           
             );
-            
-            $php_name9=$a[10].[56];
-            $php_description9=$a[10].[61];
+           $php_name9=$a[8]['charity_name'];
+            $php_description9=$a[8]['charity_tag'];
+			$php_data10=array(
+                  array("Charity Name",$a[9]['charity_name']),
+                  array("Phone Number",$a[9]['phone_number']),
+                  array("Assets",$a[9]['assets']),
+                  array("Income",$a[9]['income']),
+                  array("Expenses",$a[9]['expenses'])           
+            );
+           $php_name10=$a[9]['charity_name'];
+            $php_description10=$a[9]['charity_tag'];
+			
       ?>
 		
 		<script type="text/javascript">
@@ -305,8 +305,9 @@
 				var testTable = makeTable($(document.getElementById("table")), data);
 			}
 			function myF10() {
-			
-			}
+			data=data10;	
+				var testTable = makeTable($(document.getElementById("table")), data);
+				}
 		
 		
 		function makeTable(container, data) {
@@ -419,6 +420,12 @@
 				document.getElementById("title9").innerHTML=name9;
 				document.getElementById("body9").innerHTML=desc9;
 				
+				name10=<?php echo json_encode($php_name10); ?>;
+				data10=<?php echo json_encode($php_data10); ?>;
+				desc10=<?php echo json_encode($php_description10); ?>;
+				
+				document.getElementById("title10").innerHTML=name10;
+				document.getElementById("body10").innerHTML=desc10;
 				
 				document.getElementById("pagesU").innerHTML=page-1;
 				document.getElementById("pagebU").innerHTML=page;
@@ -488,10 +495,11 @@
 
 			<br/>
 			<div id="item2" onmouseover="myF2()" onclick="goThere()">
-				<span id="title2"> </span>
+				<span id="title2" style="width:60%;"> </span> 
 			
-				<p id="body2"> </p>
+				<p id="body2" style="width:70%;word-wrap: break-word;";> </p>
 			</div>
+
 			<br/>
 			<div id="item3" onmouseover="myF3()" onclick="goThere()">
 				<span id="title3"> </span>
@@ -538,11 +546,10 @@
 			<br/>
 			
 			<div id="item10" onmouseover="myF10()" onclick="goThere()">
-				<span id="title10"> <?php print_r ($a[2]['charity_name'])?> </span>
+				<span id="title10"></span>
 			
 				<p id="body10"> 
 					
-					<?php print_r ($a[2]['charity_tag'])?>
 				</p>
 			</div>
 		<p>Charity Results <span id="pagesL"></span>1 through <span id="pagebL"></span>0</p>
