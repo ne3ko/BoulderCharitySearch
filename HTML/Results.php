@@ -138,16 +138,6 @@
             
             $php_name9=$a[10].[56];
             $php_description9=$a[10].[61];
-            $php_data10=array(
-                  array("Charity Name",$a[10].[63]),
-                  array("Phone Number",$a[10].[64]),
-                  array("Assets",$a[10].[65]),
-                  array("Income",$a[10].[66]),
-                  array("Expenses",$a[10].[67])           
-            );
-            
-            $php_name10=$a[10].[63];
-            $php_description10=$a[10].[68];
       ?>
 		
 		<script type="text/javascript">
@@ -315,9 +305,7 @@
 				var testTable = makeTable($(document.getElementById("table")), data);
 			}
 			function myF10() {
-				data=data10;
-				
-				var testTable = makeTable($(document.getElementById("table")), data);
+			
 			}
 		
 		
@@ -430,12 +418,7 @@
 				
 				document.getElementById("title9").innerHTML=name9;
 				document.getElementById("body9").innerHTML=desc9;
-				name10=<?php echo json_encode($php_name10); ?>;
-				data10=<?php echo json_encode($php_data10); ?>;
-				desc10=<?php echo json_encode($php_description10); ?>;
 				
-				document.getElementById("title10").innerHTML=name10;
-				document.getElementById("body10").innerHTML=desc10;
 				
 				document.getElementById("pagesU").innerHTML=page-1;
 				document.getElementById("pagebU").innerHTML=page;
@@ -555,9 +538,9 @@
 			<br/>
 			
 			<div id="item10" onmouseover="myF10()" onclick="goThere()">
-				<span id="title10"> </span>
+				<span id="title10"> <?php echo json_encode($php_name1); ?> </span>
 			
-				<p id="body10"></p>
+				<p id="body10"> <?php echo json_encode($php_name3); ?></p>
 			</div>
 		<p>Charity Results <span id="pagesL"></span>1 through <span id="pagebL"></span>0</p>
 		<div>
