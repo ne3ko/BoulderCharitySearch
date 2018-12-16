@@ -508,7 +508,7 @@
 			<br/>
 			<div id="item1" onmouseover="myF1()" onclick="goThere()">
 			<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id1?>; style="text-align:left; background:transparent" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id1?> style="text-align:left; background:transparent" >
 					<span id="title1" style="width:60%;"> </span> 
 				<p id="body1" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -519,7 +519,7 @@
 			<br/>
 			<div id="item2" onmouseover="myF2()" onclick="goThere()">
 				<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id2?>; style="text-align:left; background:transparent" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id2?> style="text-align:left; background:transparent" >
 					<span id="title2" style="width:60%;"> </span> 
 				<p id="body2" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -529,7 +529,7 @@
 			<br/>
 			<div id="item3" onmouseover="myF3()" onclick="goThere()">
 				<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id3?>; style="text-align:left; background:transparent" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id3?> style="text-align:left; background:transparent" >
 					<span id="title3" style="width:60%;"> </span> 
 				<p id="body3" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -538,7 +538,7 @@
 			<br/>
 			<div id="item4"onmouseover="myF4()" onclick="goThere()">
 			<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id4?>; style="text-align:left; background:transparent;" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id4?> style="text-align:left; background:transparent;" >
 					<span id="title4" style="width:60%;"> </span> 
 				<p id="body4" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -549,7 +549,7 @@
 			<div id="item5" onmouseover="myF5()" onclick="goThere()">
 
 			<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id5?>; style="text-align:left; background:transparent;" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id5?> style="text-align:left; background:transparent;" >
 					<span id="title5" style="width:60%;"> </span> 
 				<p id="body5" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -558,7 +558,7 @@
 			<br/>
 			<div id="item6" onmouseover="myF6()" onclick="goThere()">
 				<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id6?>; style="text-align:left; background:transparent;" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id6?> style="text-align:left; background:transparent;" >
 					<span id="title6" style="width:60%;"> </span> 
 				<p id="body6" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -567,7 +567,7 @@
 			<br/>
 			<div id="item7" onmouseover="myF7()" onclick="goThere()">
 				<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id7?>; style="text-align:left; background:transparent;" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id7?> style="text-align:left; background:transparent;" >
 					<span id="title7" style="width:60%;"> </span> 
 				<p id="body7" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -576,7 +576,7 @@
 			<br/>
 			<div id="item8" onmouseover="myF8()" onclick="goThere()">
 				<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id8?>; style="text-align:left; background:transparent;" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id8?> style="text-align:left; background:transparent;" >
 					<span id="title8" style="width:60%;"> </span> 
 				<p id="body8" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -585,7 +585,7 @@
 			<br/>
 			<div id="item9" onmouseover="myF9()" onclick="goThere()">
 				<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id9?>; style="text-align:left; background:transparent;" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id9?> style="text-align:left; background:transparent;" >
 					<span id="title9" style="width:60%;"> </span> 
 				<p id="body9" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
@@ -595,7 +595,7 @@
 			
 			<div id="item10" onmouseover="myF10()" onclick="goThere()">
 				<form action="CharityReview.php" method="get">
-					<button name="charity_id" type="submit" value=<?php echo $php_id10?>; style="text-align:left; background:transparent;" >
+					<button name="charity_id" type="submit" value=<?php echo $php_id10?> style="text-align:left; background:transparent;" >
 					<span id="title10" style="width:60%;"> </span> 
 				<p id="body10" style="width:70%;word-wrap: break-word;";> </p>
 				</button>
