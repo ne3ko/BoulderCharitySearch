@@ -366,7 +366,7 @@
 				data1=<?php echo json_encode($php_data1); ?>;
 				desc1=<?php echo json_encode($php_description1); ?>;
 				
-				document.getElementById("title1").innerHTML=name1;
+				document.getElementById("title1").innerHTML=<?php echo $php_name1;?>;
 				document.getElementById("body1").innerHTML=desc1;
 				
 				
