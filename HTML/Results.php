@@ -542,7 +542,7 @@
 			
 				<p id="body10"> 
 					<?php echo json_encode($php_name3); ?>
-					<?php print_r ($a)?>
+					<?php print_r ($a[2])?>
 				</p>
 			</div>
 		<p>Charity Results <span id="pagesL"></span>1 through <span id="pagebL"></span>0</p>
