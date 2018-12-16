@@ -538,10 +538,10 @@
 			<br/>
 			
 			<div id="item10" onmouseover="myF10()" onclick="goThere()">
-				<span id="title10"> <?php echo $php_name1 ?> </span>
+				<span id="title10"> <?php print_r $php_name1 ?> </span>
 			
 				<p id="body10"> 
-					<?php echo json_encode($php_name3); ?>
+					<?php print_r json_encode($php_name3); ?>
 					<?php print_r ($a[2])?>
 				</p>
 			</div>
