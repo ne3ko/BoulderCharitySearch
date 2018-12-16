@@ -538,11 +538,11 @@
 			<br/>
 			
 			<div id="item10" onmouseover="myF10()" onclick="goThere()">
-				<span id="title10"> <?php print_r ($a[2].['charity_name'])?> </span>
+				<span id="title10"> <?php print_r ($a[2]['charity_name'])?> </span>
 			
 				<p id="body10"> 
 					
-					<?php print_r ($a[2].['charity_tag'])?>
+					<?php print_r ($a[2]['charity_tag'])?>
 				</p>
 			</div>
 		<p>Charity Results <span id="pagesL"></span>1 through <span id="pagebL"></span>0</p>
