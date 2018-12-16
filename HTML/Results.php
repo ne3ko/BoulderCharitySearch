@@ -51,6 +51,7 @@
                   array("Expenses",$a[0]['expenses'])           
             );
            $php_name1=$a[0]['charity_name'];
+		   $php_id1=$a[0]['charity_id'];
             $php_description1=$a[0]['charity_tag'];
 			
             $php_data2=array(
@@ -61,7 +62,8 @@
                   array("Expenses",$a[1]['expenses'])           
             );
            $php_name2=$a[1]['charity_name'];
-            $php_description2=$a[1]['charity_tag'];
+ 		   $php_id2=$a[1]['charity_id'];
+			$php_description2=$a[1]['charity_tag'];
 			
             
             $php_data3=array(
@@ -72,6 +74,8 @@
                   array("Expenses",$a[2]['expenses'])           
             );
            $php_name3=$a[2]['charity_name'];
+		   		   $php_id3=$a[2]['charity_id'];
+
             $php_description3=$a[2]['charity_tag'];
             
             $php_data4=array(
@@ -82,6 +86,8 @@
                   array("Expenses",$a[3]['expenses'])           
             );
            $php_name4=$a[3]['charity_name'];
+		   		   $php_id4=$a[3]['charity_id'];
+
             $php_description4=$a[3]['charity_tag'];
 			$php_data5=array(
                   array("Charity Name",$a[4]['charity_name']),
@@ -91,6 +97,8 @@
                   array("Expenses",$a[4]['expenses'])           
             );
            $php_name5=$a[4]['charity_name'];
+		   		   $php_id5=$a[4]['charity_id'];
+
             $php_description5=$a[4]['charity_tag'];
 			$php_data6=array(
                   array("Charity Name",$a[5]['charity_name']),
@@ -100,6 +108,8 @@
                   array("Expenses",$a[5]['expenses'])           
             );
            $php_name6=$a[5]['charity_name'];
+		   		   $php_id6=$a[5]['charity_id'];
+
             $php_description6=$a[5]['charity_tag'];
 			$php_data7=array(
                   array("Charity Name",$a[6]['charity_name']),
@@ -109,6 +119,8 @@
                   array("Expenses",$a[6]['expenses'])           
             );
            $php_name7=$a[6]['charity_name'];
+		   		   $php_id7=$a[6]['charity_id'];
+
             $php_description7=$a[6]['charity_tag'];
 			$php_data8=array(
                   array("Charity Name",$a[7]['charity_name']),
@@ -118,6 +130,8 @@
                   array("Expenses",$a[7]['expenses'])           
             );
            $php_name8=$a[7]['charity_name'];
+		   		   $php_id8=$a[7]['charity_id'];
+
             $php_description8=$a[7]['charity_tag'];
 			$php_data9=array(
                   array("Charity Name",$a[8]['charity_name']),
@@ -127,6 +141,8 @@
                   array("Expenses",$a[8]['expenses'])           
             );
            $php_name9=$a[8]['charity_name'];
+		   		   $php_id9=$a[8]['charity_id'];
+
             $php_description9=$a[8]['charity_tag'];
 			$php_data10=array(
                   array("Charity Name",$a[9]['charity_name']),
@@ -136,6 +152,8 @@
                   array("Expenses",$a[9]['expenses'])           
             );
            $php_name10=$a[9]['charity_name'];
+		   		   $php_id10=$a[9]['charity_id'];
+
             $php_description10=$a[9]['charity_tag'];
 			
       ?>
@@ -144,6 +162,7 @@
 		<!-- initialization-->
 			var page=+1;
 			var data=[];
+			
 			var name1="";
 			var data1=[];
 			var desc1="";
@@ -546,11 +565,15 @@
 			<br/>
 			
 			<div id="item10" onmouseover="myF10()" onclick="goThere()">
+				<form action="CharityReview.php" method="get">
+					<button name="charity_id" type="submit" value=<?php echo $php_id10;?>; >
 				<span id="title10"></span>
 			
 				<p id="body10"> 
 					
 				</p>
+				</button>
+				</form>
 			</div>
 		<p>Charity Results <span id="pagesL"></span>1 through <span id="pagebL"></span>0</p>
 		<div>
