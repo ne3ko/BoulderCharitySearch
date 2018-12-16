@@ -41,7 +41,7 @@
 
  
 	$a=pg_fetch_all($result);
-	print_r ($a);
+	
    
             $php_data1=array(
                   array("Charity Name",$a[0].[0]),
@@ -53,7 +53,7 @@
             
             $php_name1=$a[0].[7];
             $php_description1=$a[0].[5];
-            echo $php_name1;
+            
             
             $php_data2=array(
                   array("Charity Name",$a[1].[0]),
