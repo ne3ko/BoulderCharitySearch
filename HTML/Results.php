@@ -366,7 +366,7 @@
 				data1=<?php echo json_encode($php_data1); ?>;
 				desc1=<?php echo json_encode($php_description1); ?>;
 				
-				document.getElementById("title1").innerHTML=<?php echo json_encode($php_name1);?>;
+				document.getElementById("title1").innerHTML=name1;
 				document.getElementById("body1").innerHTML=desc1;
 				
 				
@@ -382,9 +382,9 @@
 				data3=<?php echo json_encode($php_data3); ?>;
 				desc3=<?php echo json_encode($php_description3); ?>;
 				
-				document.getElementById("title3").innerHTML=<?php echo json_encode($php_name3);?>;
+				document.getElementById("title3").innerHTML=name3;
 				document.getElementById("body3").innerHTML=desc3;
-				
+				<?php print_r ($a);?>
 				
 				name4=<?php echo json_encode($php_name4); ?>;
 				data4=<?php echo json_encode($php_data4); ?>;
