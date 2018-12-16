@@ -51,7 +51,7 @@
                   array("Expenses",$a[0].[4])            
             );
             
-            $php_name1=implode($a[0].[7]);
+            $php_name1=implode($catagory);
             $php_description1=$a[0].[5];
             
             
