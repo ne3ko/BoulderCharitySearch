@@ -67,14 +67,14 @@
 				$php_description2=$a[1].[5];
             
             $php_data3=array(
-                  array("Charity Name",$a[2].['charity_name']),
-                  array("Phone Number",$a[2].['phone_number']),
-                  array("Assets",$a[2].['assets']),
-                  array("Income",$a[2].['income']),
-                  array("Expenses",$a[2].['expenses'])           
+                  array("Charity Name",$a[2]['charity_name']),
+                  array("Phone Number",$a[2]['phone_number']),
+                  array("Assets",$a[2]['assets']),
+                  array("Income",$a[2]['income']),
+                  array("Expenses",$a[2]['expenses'])           
             );
            $php_name3=implode($a[2]['charity_name']);
-            $php_description3=$a[2].['charity_tag'];
+            $php_description3=$a[2]['charity_tag'];
             
             
             $php_data4=array(
@@ -366,9 +366,9 @@
 				document.getElementById("body2").innerHTML=desc2;		
 				
 				
-				name3=<?php echo json_encode($php_name3); ?>;
-				data3=<?php echo json_encode($php_data3); ?>;
-				desc3=<?php echo json_encode($php_description3); ?>;
+				name3=<?php print_r json_encode($php_name3); ?>;
+				data3=<?php print_r json_encode($php_data3); ?>;
+				desc3=<?php print_r json_encode($php_description3); ?>;
 				
 				document.getElementById("title3").innerHTML=name3;
 				document.getElementById("body3").innerHTML=desc3;
