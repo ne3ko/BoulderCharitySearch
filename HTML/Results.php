@@ -366,9 +366,9 @@
 				document.getElementById("body2").innerHTML=desc2;		
 				
 				
-				name3=<?php print_r json_encode($php_name3); ?>;
+				name3=<?php echo json_encode($php_name3); ?>;
 				data3=<?php echo json_encode($php_data3); ?>;
-				desc3=<?php print_r json_encode($php_description3); ?>;
+				desc3=<?php echo json_encode($php_description3); ?>;
 				
 				document.getElementById("title3").innerHTML=name3;
 				document.getElementById("body3").innerHTML=desc3;
