@@ -56,11 +56,11 @@
             
             
             $php_data2=array(
-                  array("Charity Name",($a[1].[0])),
-                  array("Phone Number",$a[1].[1]),
-                  array("Assets",$a[1].[2]),
-                  array("Income",$a[1].[3]),
-                  array("Expenses",$a[1].[4])           
+                  array("Charity Name",($a[1][0])),
+                  array("Phone Number",$a[1][1]),
+                  array("Assets",$a[1][2]),
+                  array("Income",$a[1][3]),
+                  array("Expenses",$a[1][4])           
             );
             
 			    $php_name2=$a[1].[7];
@@ -73,7 +73,7 @@
                   array("Income",$a[2].['income']),
                   array("Expenses",$a[2].['expenses'])           
             );
-           $php_name3=implode($a[2].['charity_name']);
+           $php_name3=implode($a[2]['charity_name']);
             $php_description3=$a[2].['charity_tag'];
             
             
