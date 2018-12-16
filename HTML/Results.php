@@ -384,7 +384,7 @@
 				
 				document.getElementById("title3").innerHTML=name3;
 				document.getElementById("body3").innerHTML=desc3;
-				<?php print_r ($a);?>
+			
 				
 				name4=<?php echo json_encode($php_name4); ?>;
 				data4=<?php echo json_encode($php_data4); ?>;
