@@ -51,12 +51,12 @@
                   array("Expenses",$a[0].[4])            
             );
             
-            $php_name1=$a[0].[7];
+            $php_name1=implode($a[0].[7]);
             $php_description1=$a[0].[5];
             
             
             $php_data2=array(
-                  array("Charity Name",(implode($a[1].[0]))),
+                  array("Charity Name",($a[1].[0])),
                   array("Phone Number",$a[1].[1]),
                   array("Assets",$a[1].[2]),
                   array("Income",$a[1].[3]),
@@ -67,13 +67,13 @@
 				$php_description2=$a[1].[5];
             
             $php_data3=array(
-                  array("Charity Name",implode($a[2].['charity_name'])),
+                  array("Charity Name",$a[2].['charity_name']),
                   array("Phone Number",$a[2].['phone_number']),
                   array("Assets",$a[2].['assets']),
                   array("Income",$a[2].['income']),
                   array("Expenses",$a[2].['expenses'])           
             );
-           $php_name3=$a[2].['charity_name'];
+           $php_name3=implode($a[2].['charity_name']);
             $php_description3=$a[2].['charity_tag'];
             
             
@@ -92,7 +92,7 @@
                   array("Charity Name",$a[10].[28]),
                   array("Phone Number",$a[10].[29]),
                   array("Assets",$a[10].[30]),
-                  array("Income",$aa[31]),
+                  array("Income",$a[10].[31]),
                   array("Expenses",$a[10].[32])           
             );
             
