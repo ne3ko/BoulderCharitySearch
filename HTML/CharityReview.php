@@ -137,7 +137,7 @@ if (!$result) {
 while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
-             ?>'> Link to Charity Webpage </a>
+             ?>' style="color: white"> Link to Charity Webpage </a>
            </button>
         </div>
 
@@ -157,7 +157,7 @@ if (!$result) {
 while ($row = pg_fetch_row($result)) {
   echo "$row[0]";
 }
-             ?>'> Link to Charity IRS Form </a>
+             ?>' style="color: white"> Link to Charity IRS Form </a>
            </button>
         </div>
 
